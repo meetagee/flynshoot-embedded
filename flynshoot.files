@@ -11,6 +11,7 @@ application/sources/ak/src/message.c
 application/sources/ak/src/task.c
 application/sources/ak/src/timer.c
 application/sources/ak/src/tsm.c
+application/sources/app/activeobj.h
 application/sources/app/app.cpp
 application/sources/app/app.h
 application/sources/app/app_bsp.cpp
@@ -23,6 +24,14 @@ application/sources/app/app_flash.h
 application/sources/app/app_if.h
 application/sources/app/app_non_clear_ram.cpp
 application/sources/app/app_non_clear_ram.h
+application/sources/app/flynshoot_game_control.cpp
+application/sources/app/flynshoot_game_control.h
+application/sources/app/flynshoot_mines.cpp
+application/sources/app/flynshoot_mines.h
+application/sources/app/flynshoot_missile.cpp
+application/sources/app/flynshoot_missile.h
+application/sources/app/flynshoot_ship.cpp
+application/sources/app/flynshoot_ship.h
 application/sources/app/rf_remote_ctrl.cpp
 application/sources/app/shell.cpp
 application/sources/app/task_dbg.cpp

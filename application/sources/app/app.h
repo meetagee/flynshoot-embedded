@@ -162,6 +162,59 @@ enum {
 };
 
 /*****************************************************************************/
+/*  GAME CONTROL task define
+ */
+/*****************************************************************************/
+/* define timer */
+
+/* define signal */
+enum {
+	AC_GAME_CONTROL_UPDATE = AK_USER_DEFINE_SIG,
+};
+
+/*****************************************************************************/
+/*  SHIP task define
+ */
+/*****************************************************************************/
+/* define timer */
+
+/* define signal */
+enum {
+	AC_SHIP_ACTIVE = AK_USER_DEFINE_SIG,
+	AC_SHIP_PARKED,
+	AC_SHIP_FLYING,
+	AC_SHIP_EXPLODING,
+};
+
+/*****************************************************************************/
+/*  MISSILE task define
+ */
+/*****************************************************************************/
+/* define timer */
+
+/* define signal */
+enum {
+	AC_MISSILE_ARMED = AK_USER_DEFINE_SIG,
+	AC_MISSILE_FLYING,
+	AC_MISSILE_EXPLODING,
+};
+
+/******************************************************************************/
+/*  MINE task define
+ */
+/*****************************************************************************/
+/* define timer */
+
+/* define signal */
+enum {
+	AC_MINES_UNUSED = AK_USER_DEFINE_SIG,
+	AC_MINES_USED,
+	AC_MINES_PLANTED,
+	AC_MINES_EXPLODING,
+};
+
+
+/*****************************************************************************/
 /*  global define variable
  */
 /*****************************************************************************/

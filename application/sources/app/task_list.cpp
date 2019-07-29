@@ -20,6 +20,11 @@ task_t app_task_table[] = {
 	{AC_TASK_DISPLAY_ID		,	TASK_PRI_LEVEL_4	,	task_display		},
 	{AC_TASK_ZIGBEE_ID		,	TASK_PRI_LEVEL_4	,	task_zigbee			},
 
+	{AC_GAME_CONTROL_ID		,	TASK_PRI_LEVEL_4	,	task_control_game	},
+	{AC_SHIP_ID				,	TASK_PRI_LEVEL_4	,	task_control_ship	},
+	{AC_MISSILE_ID			,	TASK_PRI_LEVEL_4	,	task_control_missile},
+	{AC_MINES_ID			,	TASK_PRI_LEVEL_4	,	task_control_mines	},
+
 	/*************************************************************************/
 	/* RF24 NETWORK TASK */
 	/*************************************************************************/
