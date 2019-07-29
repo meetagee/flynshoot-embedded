@@ -1,6 +1,10 @@
 #include "flynshoot_missile.h"
 #include "app.h"
 #include "task_list.h"
+#include "Adafruit_ssd1306syp.h"
+
+fifo_t* missiles;
+static bool doneInit = false;
 
 void missileInit (void);
 
@@ -14,7 +18,7 @@ void task_control_missile(ak_msg_t* msg) {
 		break;
 
 	case(AC_MISSILE_FLYING): {
-		
+
 	}
 		break;
 
@@ -24,8 +28,5 @@ void task_control_missile(ak_msg_t* msg) {
 }
 
 void missileInit (uint8_t* coords[]) {
-	activeObj_t tmp;
-	tmp.x = *coords[0];
-	tmp.y = *coords[1];
-	missile.push_front(tmp);
+
 }

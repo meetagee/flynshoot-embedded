@@ -2,10 +2,11 @@
 #define __FLYNSHOOT_MISSILE_H__
 
 #define MAX_LIST_SIZE	5
+#define MISSILE_SPEED_X	5
 
 #include "activeObj.h"
-#include <list>
+#include "fifo.h"
 
-extern std::list<activeObj_t> missile(MAX_LIST_SIZE);
+extern fifo_t* missiles;
 
 #endif // MISSILE_H
