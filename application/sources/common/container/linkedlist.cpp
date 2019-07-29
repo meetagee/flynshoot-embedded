@@ -5,7 +5,7 @@ void linkedList_init (linkedList_t* linkedList) {
 	linkedList->tail = nullptr;
 }
 
-void insert_back(linkedList_t* linkedList, activeObj_t data) {
+void insert_back(linkedList_t* linkedList, activeObj_t* data) {
 	node_t* tmp;
 	tmp->data = data;
 	tmp->next = nullptr;

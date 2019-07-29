@@ -1,12 +1,11 @@
 #ifndef __FLYNSHOOT_MISSILE_H__
 #define __FLYNSHOOT_MISSILE_H__
 
-#define MAX_LIST_SIZE	5
 #define MISSILE_SPEED_X	5
 
 #include "activeObj.h"
-#include "fifo.h"
+#include "linkedlist.h"
 
-extern fifo_t* missiles;
+extern activeObj_t* missile;
 
 #endif // MISSILE_H

@@ -9,6 +9,7 @@
 
 #include "task_list.h"
 #include "task_list_if.h"
+#include "flynshoot_game_control.h"
 
 button_t btn_mode;
 button_t btn_up;
@@ -19,6 +20,7 @@ void btn_mode_callback(void* b) {
 	switch (me_b->state) {
 	case BUTTON_SW_STATE_PRESSED: {
 		APP_DBG("[btn_mode_callback] BUTTON_SW_STATE_PRESSED\n");
+		MISSILE_FIRE = true;
 	}
 		break;
 
