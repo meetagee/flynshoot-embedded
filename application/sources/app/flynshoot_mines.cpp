@@ -1,5 +1,5 @@
 #include "flynshoot_mines.h"
-#include "activeobj.h"
+#include "activeObj.h"
 #include "app.h"
 #include "task_list.h"
 

@@ -11,7 +11,7 @@ application/sources/ak/src/message.c
 application/sources/ak/src/task.c
 application/sources/ak/src/timer.c
 application/sources/ak/src/tsm.c
-application/sources/app/activeobj.h
+application/sources/app/activeObj.h
 application/sources/app/app.cpp
 application/sources/app/app.h
 application/sources/app/app_bsp.cpp
