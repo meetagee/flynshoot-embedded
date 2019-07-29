@@ -23,5 +23,5 @@ void task_control_ship(ak_msg_t* msg) {
 
 void checkDeath()
 {
-
+	//check top
 }
