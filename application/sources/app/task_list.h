@@ -23,13 +23,13 @@ enum {
 	AC_TASK_RF24_IF_ID,
 	AC_TASK_UART_IF_ID,
 	AC_TASK_DBG_ID,
-	AC_TASK_DISPLAY_ID,
 	AC_TASK_ZIGBEE_ID,
 
 	AC_GAME_CONTROL_ID,
 	AC_SHIP_ID,
 	AC_MISSILE_ID,
 	AC_MINES_ID,
+	AC_DISPLAY_ID,
 
 	/* NRF24 NETWORKS */
 #if defined (IF_NETWORK_NRF24_EN)
@@ -61,14 +61,13 @@ extern void task_if(ak_msg_t*);
 extern void task_rf24_if(ak_msg_t*);
 extern void task_uart_if(ak_msg_t*);
 extern void task_dbg(ak_msg_t*);
-extern void task_display(ak_msg_t*);
 extern void task_zigbee(ak_msg_t*);
 
 extern void task_control_game(ak_msg_t*);
 extern void task_control_ship(ak_msg_t*);
 extern void task_control_missile(ak_msg_t*);
 extern void task_control_mines(ak_msg_t*);
-
+extern void task_control_display(ak_msg_t*);
 /* RF24 NETWORK TASK */
 extern void task_rf24_phy(ak_msg_t*);
 extern void task_rf24_mac(ak_msg_t*);

@@ -15,10 +15,15 @@ SOURCES_CPP += sources/app/task_shell.cpp
 SOURCES_CPP += sources/app/task_life.cpp
 SOURCES_CPP += sources/app/task_fw.cpp
 SOURCES_CPP += sources/app/task_list.cpp
-SOURCES_CPP += sources/app/task_display.cpp
 SOURCES_CPP += sources/app/task_zigbee.cpp
 
 SOURCES_CPP += sources/app/task_if.cpp
 SOURCES_CPP += sources/app/task_rf24_if.cpp
 SOURCES_CPP += sources/app/task_uart_if.cpp
 SOURCES_CPP += sources/app/task_dbg.cpp
+
+SOURCES_CPP += sources/app/flynshoot_game_control.cpp
+SOURCES_CPP += sources/app/flynshoot_mines.cpp
+SOURCES_CPP += sources/app/flynshoot_missle.cpp
+SOURCES_CPP += sources/app/flynshoot_ship.cpp
+SOURCES_CPP += sources/app/flynshoot_display.cpp

@@ -115,19 +115,13 @@ enum {
 };
 
 /*****************************************************************************/
-/*  LIFE task define
+/*  display task define
  */
 /*****************************************************************************/
-/* define timer */
-#define AC_DISPLAY_LOGO_INTERVAL			(10000)
 
-/* define signal */
 enum {
-	AC_DISPLAY_INITIAL = AK_USER_DEFINE_SIG,
-	AC_DISPLAY_SHOW_ON_LOGO,
-	AC_DISPLAY_SHOW_OFF,
+	AC_FLYNSHOOT_INIT = AK_USER_DEFINE_SIG,
 };
-
 /*****************************************************************************/
 /*  ZIGBEE task define
  */

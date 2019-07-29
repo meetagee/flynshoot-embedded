@@ -1,5 +1,7 @@
-build_arm_cortex_m3_base_application_stm32l/task_list.o: \
- sources/app/task_list.cpp sources/app/task_list.h sources/ak/inc/ak.h \
+build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o: \
+ sources/app/flynshoot_game_control.cpp \
+ sources/app/flynshoot_game_control.h sources/app/task_list.h \
+ sources/ak/inc/ak.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/string.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_ansi.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/newlib.h \
@@ -32,4 +34,6 @@ build_arm_cortex_m3_base_application_stm32l/task_list.o: \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/bits/std_abs.h \
  sources/ak/inc/port.h sources/platform/stm32l/platform.h \
  sources/ak/inc/task.h sources/common/container/log_queue.h \
- sources/ak/inc/task.h sources/ak/inc/timer.h sources/ak/inc/timer.h
+ sources/ak/inc/task.h sources/app/app.h sources/app/app_if.h \
+ sources/app/app_eeprom.h sources/app/app_data.h sources/sys/sys_boot.h \
+ sources/ak/inc/port.h sources/ak/inc/timer.h sources/ak/inc/timer.h
