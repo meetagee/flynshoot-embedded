@@ -15,6 +15,6 @@ typedef struct {
 extern void linkedList_init (linkedList_t* linkedList);
 extern void insert_back (linkedList_t* linkedList, activeObj_t data);
 extern node_t* getTail (linkedList_t* linkedList);
-extern void delete_back (linkedList_t* linkedList);
+extern void delete_front (linkedList_t* linkedList);
 
 #endif // LINKEDLIST_H
