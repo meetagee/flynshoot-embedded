@@ -5,6 +5,4 @@
 #define mineHeight 4
 #define mineWidth 4
 
-extern bool MISSILE_HIT_MINE(void);
-
 #endif // FLYNSHOOT_MINES_H
