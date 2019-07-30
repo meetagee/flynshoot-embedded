@@ -7,10 +7,16 @@
 #include "timer.h"
 #include "flynshoot_ship.h"
 
+// prototype
+void spawnMissile(uint8_t shipX, uint8_t shipY);
+
+uint8_t missile_bmp[MISSILE_LENGTH] = {1 ,1 ,1 ,1 ,1};
+uint8_t missileX, missileY;
 
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_MISSILE_ARMED): {
+
 		}
 			break;
 
@@ -28,6 +34,7 @@ void task_control_missile(ak_msg_t* msg) {
 }
 
 
-void spawnMissle(){
-
+void spawnMissile(uint8_t shipX, uint8_t shipY){
+	missileX = shipX;
+	missileY = shipY;
 }
