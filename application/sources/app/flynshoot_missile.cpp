@@ -1,4 +1,4 @@
-﻿#include "app.h"
+#include "app.h"
 #include "task_list.h"
 #include "Adafruit_ssd1306syp.h"
 #include "message.h"

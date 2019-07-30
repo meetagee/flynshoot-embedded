@@ -8,4 +8,7 @@
 
 extern Adafruit_ssd1306syp screenObj;
 
+extern int topTunnel[tunnelWidth];
+extern int botTunnel[tunnelWidth];
+
 #endif // FLYNSHOOT_DISPLAY_H

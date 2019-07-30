@@ -1,6 +1,7 @@
 #include "flynshoot_display.h"
 #include "app.h"
 #include "task_list.h"
+#include "app_dbg.h"
 
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
@@ -8,6 +9,9 @@ int botTunnel[tunnelWidth];
 bool MISSILE_HIT_TUNNEL (void);
 
 Adafruit_ssd1306syp screenObj;
+
+static void drawTunnel();
+static void updateTunnel();
 
 void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
@@ -20,13 +24,30 @@ void task_control_display(ak_msg_t* msg) {
 			}
 			screenObj.initialize();
 			screenObj.clear();
-			screenObj.print("test");
+			screenObj.display_on();
 			screenObj.update();
+			task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_DRAW_TUNNEL);
 		}
+		break;
+		case AC_FLYNSHOOT_DRAW_TUNNEL:
+		{
+			screenObj.setCursor(85,5);
+			screenObj.print("display");
+			drawTunnel();
+		}
+		break;
+
+		case AC_FLYNSHOOT_UPDATE_TUNNEL:
+		{
+			APP_DBG("UPDATE TUNNEL \n");
+			updateTunnel();
+			task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_DRAW_TUNNEL);
+		}
+		break;
 	}
 }
 
-void updateTunnel(){
+static void updateTunnel(){
 	for(int i = 0; i < tunnelWidth-1; i++)
 	{
 		topTunnel[i] = topTunnel[i+1];
@@ -34,14 +55,15 @@ void updateTunnel(){
 	}
 	int topOldBlocks = topTunnel[tunnelWidth-2];
 	int botOldBlocks = botTunnel[tunnelWidth-2];
-	int topNewBlocks = topOldBlocks + (rand()%1);
-	int botNewBlocks = botOldBlocks + (rand()%1);
+	int topNewBlocks = topOldBlocks + ((rand()%3)-1);
+	int botNewBlocks = botOldBlocks + ((rand()%3)-1);
 
 	if(topNewBlocks > tunnelHeight) topNewBlocks--;
-	if(botNewBlocks > tunnelHeight) topNewBlocks--;
-
+	if(botNewBlocks > tunnelHeight) botNewBlocks--;
+	if(topNewBlocks < 0) topNewBlocks=0;
+	if(botNewBlocks < 0) botNewBlocks=0;
 	topTunnel[tunnelWidth-1] = topNewBlocks;
-	botTunnel[tunnelWidth-1] = topOldBlocks;
+	botTunnel[tunnelWidth-1] = botNewBlocks;
 }
 
 bool checkTunnelOverlap(int x, int y)
@@ -59,4 +81,19 @@ bool checkTunnelOverlap(int x, int y)
 		if(sizeTunnel >= 60-y) return true;
 	}
 	return false;
+}
+
+static void drawTunnel(){
+
+	for(int i = 0; i < tunnelWidth; i++)
+	{
+		screenObj.fillRect(i,-1,1,10,BLACK);
+		screenObj.fillRect(i,-1,1,2*topTunnel[i],WHITE);
+	}
+	for(int i = 0; i < tunnelWidth; i++)
+	{
+		screenObj.fillRect(i,60,1,-10,BLACK);
+		screenObj.fillRect(i,60,1,2*-botTunnel[i],WHITE);
+	}
+	screenObj.update();
 }

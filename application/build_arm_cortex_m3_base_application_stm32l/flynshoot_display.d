@@ -89,5 +89,11 @@ build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o: \
  sources/platform/stm32l/arduino/cores/WString.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/ctype.h \
  sources/platform/stm32l/arduino/cores/stm32/pgmspace.h \
+<<<<<<< HEAD
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/inttypes.h \
  sources/app/app.h sources/app/task_list.h sources/ak/inc/task.h
+=======
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/inttypes.h \
+ sources/app/app.h sources/app/task_list.h sources/ak/inc/task.h \
+ sources/app/app_dbg.h sources/common/xprintf.h
+>>>>>>> 5d9f8d851a769155d0e47885fb5bcb3cc5ef9416

@@ -121,6 +121,8 @@ enum {
 
 enum {
 	AC_FLYNSHOOT_INIT = AK_USER_DEFINE_SIG,
+	AC_FLYNSHOOT_DRAW_TUNNEL,
+	AC_FLYNSHOOT_UPDATE_TUNNEL,
 };
 /*****************************************************************************/
 /*  ZIGBEE task define

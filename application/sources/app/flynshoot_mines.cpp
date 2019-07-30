@@ -16,8 +16,3 @@ void task_control_mines(ak_msg_t* msg) {
 
 	}
 }
-
-bool MISSILE_HIT_MINE(void) {
-	// TODO: check if missile hits mine
-	// return true if yes, otw false
-}
