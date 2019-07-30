@@ -238,7 +238,7 @@ endif
 
 .PHONY: com
 com:
-	minicom -D /dev/ttyUSB0 -b $(SYS_CONSOLE_BAUDRATE)
+	minicom -D /dev/ttyUSB1 -b $(SYS_CONSOLE_BAUDRATE)
 
 .PHONY: clean
 clean:

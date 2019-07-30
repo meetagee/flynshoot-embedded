@@ -145,7 +145,7 @@ int main_app() {
 	* run applications
 	*******************************************************************************/
 
-	sys_ctrl_shell_sw_to_nonblock();
+	sys_ctrl_shell_sw_to_block();
 
 	return task_run();
 }
@@ -177,6 +177,7 @@ void app_task_init() {
 	task_post_pure_msg(AC_TASK_FW_ID, FW_CHECKING_REQ);
 	task_post_pure_msg(AC_TASK_RF24_IF_ID, AC_RF24_IF_INIT_NETWORK);
 	task_post_pure_msg(AC_TASK_UART_IF_ID, AC_UART_IF_INIT);
+
 	task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_INIT);
 }
 

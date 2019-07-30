@@ -11,12 +11,14 @@
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_MISSILE_ARMED): {
+
 		}
+
 			break;
 
 		case(AC_MISSILE_FLYING): {
 
-			}
+		}
 
 			break;
 

@@ -21,8 +21,10 @@ void task_control_display(ak_msg_t* msg) {
 			}
 			screenObj.initialize();
 			screenObj.clear();
+			screenObj.display_on();
 			screenObj.print("test");
 			screenObj.update();
+
 		}
 	}
 }
