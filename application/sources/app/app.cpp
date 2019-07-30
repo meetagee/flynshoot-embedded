@@ -179,6 +179,7 @@ void app_task_init() {
 	task_post_pure_msg(AC_TASK_UART_IF_ID, AC_UART_IF_INIT);
 
 	task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_INIT);
+	task_post_pure_msg(AC_GAME_CONTROL_ID,AC_GAME_CONTROL_UPDATE);
 }
 
 /*****************************************************************************/
