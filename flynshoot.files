@@ -212,6 +212,7 @@ application/sources/networks/ArduinoZigBee/zb_zcl.cpp
 application/sources/networks/ArduinoZigBee/zb_zcl.h
 application/sources/networks/ArduinoZigBee/zb_znp.cpp
 application/sources/networks/ArduinoZigBee/zb_znp.h
+application/sources/networks/Makefile.mk
 application/sources/networks/net/link/hal/link_hal.cpp
 application/sources/networks/net/link/hal/link_hal.h
 application/sources/networks/net/link/link.cpp

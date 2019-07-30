@@ -1,5 +1,6 @@
 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o: \
  sources/app/flynshoot_missile.cpp sources/app/app.h sources/ak/inc/ak.h \
+<<<<<<< HEAD
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/string.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_ansi.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/newlib.h \
@@ -16,6 +17,24 @@ build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o: \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/lock.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/cdefs.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/string.h \
+=======
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/string.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_ansi.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/newlib.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_newlib_version.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/config.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/machine/ieeefp.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/features.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/reent.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_ansi.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include/stddef.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/_types.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/machine/_types.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/machine/_default_types.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/lock.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/cdefs.h \
+ /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/sys/string.h \
+>>>>>>> ffb3618ba52a7cf90ae1cb9becc657b1fe5d862f
  sources/ak/inc/fsm.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include/stdint.h \
  /home/lamht/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/stdint.h \
