@@ -3,12 +3,11 @@
 #include "app.h"
 #include "task_list.h"
 
-#define tunnelHeight 5
-#define tunnelWidth 80
-
-
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
+
+bool MISSILE_HIT_TUNNEL (void);
+
 Adafruit_ssd1306syp screenObj;
 void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
@@ -60,4 +59,9 @@ bool checkTunnelOverlap(int x, int y)
 		if(sizeTunnel >= 60-y) return true;
 	}
 	return false;
+}
+
+bool MISSILE_HIT_TUNNEL (void) {
+	// TODO: check if missile hits tunnel
+	// return true if yes, otw false
 }

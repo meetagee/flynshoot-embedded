@@ -3,5 +3,10 @@
 
 //int* getShipCoordinates()
 
+#define shipHeight 4
+#define shipWidth 5
+
+extern int ship[shipHeight][shipWidth];
+extern int shipx, shipy;
 
 #endif // FLYNSHOOT_SHIP_H

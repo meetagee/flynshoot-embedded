@@ -2,8 +2,9 @@
 #include "app.h"
 #include "task_list.h"
 
-#define mineHeight 4
-#define mineWidth 4
+// prototype
+bool MISSILE_HIT_MINE(void);
+
 int mine[mineHeight][mineWidth] = {{0,1,1,0},
 								   {1,1,1,1},
 								   {1,1,1,1,},
@@ -16,3 +17,7 @@ void task_control_mines(ak_msg_t* msg) {
 	}
 }
 
+bool MISSILE_HIT_MINE(void) {
+	// TODO: check if missile hits mine
+	// return true if yes, otw false
+}
