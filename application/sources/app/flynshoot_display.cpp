@@ -1,14 +1,11 @@
 #include "flynshoot_display.h"
-#include "Adafruit_ssd1306syp.h"
 #include "app.h"
 #include "task_list.h"
 #include "app_dbg.h"
-#define tunnelHeight 5
-#define tunnelWidth 80
-
 
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
+
 Adafruit_ssd1306syp screenObj;
 
 static void drawTunnel();

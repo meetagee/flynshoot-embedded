@@ -2,9 +2,6 @@
 #include "task_list.h"
 #include "app.h"
 
-#define shipHeight 4
-#define shipWidth 5
-
 int ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 								   {1,1,0,0,0},
 								   {1,1,1,1,1,},
