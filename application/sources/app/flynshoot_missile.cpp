@@ -92,10 +92,12 @@ void renderMissile (void) {
 bool MISSILE_HIT_TUNNEL (void) {
 	// TODO: check if missile hits tunnel
 	// return true if yes, otw false
+	return true;
 }
 
 bool MISSILE_HIT_MINE(void) {
 	// TODO: check if missile hits mine
 	// return true if yes, otw false
+	return true;
 }
 

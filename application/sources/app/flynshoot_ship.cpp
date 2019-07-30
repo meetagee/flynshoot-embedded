@@ -7,8 +7,8 @@ int ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 								   {1,1,1,1,1,},
 								   {1,1,1,1,1,},};
 
-int shipx;
-int shipy;
+int shipx = 0; // Test
+int shipy = 40; // Test
 
 void task_control_ship(ak_msg_t* msg) {
 	switch(msg->sig) {

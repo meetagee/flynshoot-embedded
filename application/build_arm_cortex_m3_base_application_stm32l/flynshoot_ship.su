@@ -1,1 +1,1 @@
-flynshoot_ship.cpp:16:6:void task_control_ship(ak_msg_t*)	0	static
+flynshoot_ship.cpp:13:6:void task_control_ship(ak_msg_t*)	0	static

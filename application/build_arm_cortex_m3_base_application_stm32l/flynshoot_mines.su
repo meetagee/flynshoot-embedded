@@ -1,1 +1,1 @@
-flynshoot_mines.cpp:12:6:void task_control_mines(ak_msg_t*)	0	static
+flynshoot_mines.cpp:13:6:void task_control_mines(ak_msg_t*)	0	static
