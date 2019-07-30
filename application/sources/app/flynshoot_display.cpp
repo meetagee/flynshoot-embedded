@@ -11,6 +11,8 @@ Adafruit_ssd1306syp screenObj;
 static void drawTunnel();
 static void updateTunnel();
 
+bool MISSILE_HIT_TUNNEL (void);
+
 void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
 		case AC_FLYNSHOOT_INIT:

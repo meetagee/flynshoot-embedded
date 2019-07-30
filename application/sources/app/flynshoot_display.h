@@ -7,6 +7,7 @@
 #define tunnelWidth 80
 
 extern Adafruit_ssd1306syp screenObj;
+
 extern int topTunnel[tunnelWidth];
 extern int botTunnel[tunnelWidth];
 
