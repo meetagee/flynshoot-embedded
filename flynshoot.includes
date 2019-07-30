@@ -69,3 +69,4 @@ boot/sources/platform/stm32l/Libraries/CMSIS/Include
 boot/sources/platform/stm32l/Libraries/CMSIS/RTOS
 boot/sources/platform/stm32l/Libraries/STM32L1xx_StdPeriph_Driver/inc
 boot/sources/sys
+application

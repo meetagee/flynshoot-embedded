@@ -24,6 +24,6 @@ SOURCES_CPP += sources/app/task_dbg.cpp
 
 SOURCES_CPP += sources/app/flynshoot_game_control.cpp
 SOURCES_CPP += sources/app/flynshoot_mines.cpp
-SOURCES_CPP += sources/app/flynshoot_missle.cpp
+SOURCES_CPP += sources/app/flynshoot_missile.cpp
 SOURCES_CPP += sources/app/flynshoot_ship.cpp
 SOURCES_CPP += sources/app/flynshoot_display.cpp

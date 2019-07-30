@@ -39,4 +39,5 @@ build_arm_cortex_m3_base_application_stm32l/app_bsp.o: \
  sources/platform/stm32l/system.h sources/common/xprintf.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include/stdarg.h \
  sources/app/app.h sources/app/app_bsp.h sources/app/app_dbg.h \
- sources/app/app_if.h sources/app/task_list.h sources/app/task_list_if.h
+ sources/app/app_if.h sources/app/task_list.h sources/app/task_list_if.h \
+ sources/app/flynshoot_game_control.h

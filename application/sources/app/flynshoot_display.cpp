@@ -6,40 +6,43 @@
 #define tunnelHeight 5
 #define tunnelWidth 80
 
-#define screenSize 80
 
-int topTunnel[tunnelWidth] = {0};
-int botTunnel[tunnelWidth] = {0};
+int topTunnel[tunnelWidth];
+int botTunnel[tunnelWidth];
 Adafruit_ssd1306syp screenObj;
 void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
 		case AC_FLYNSHOOT_INIT:
 		{
-			topTunnel[tunnelWidth] = {0};
-			botTunnel[tunnelWidth] = {0};
+			for(int i = 0; i < tunnelWidth; i++)
+			{
+				topTunnel[i] = 0;
+				botTunnel[i] = 0;
+			}
 			screenObj.initialize();
 			screenObj.clear();
 			screenObj.print("test");
+			screenObj.update();
 		}
 	}
 }
 
 void updateTunnel(){
-	for(int j = 0; j < tunnelWidth-1; j++)
+	for(int i = 0; i < tunnelWidth-1; i++)
 	{
 		topTunnel[i] = topTunnel[i+1];
 		botTunnel[i] = botTunnel[i+1];
 	}
-	int topOldBlocks = topTunnel[tunnelWidth-1];
-	int botOldBlocks = botTunnel[tunnelWidth-1];
+	int topOldBlocks = topTunnel[tunnelWidth-2];
+	int botOldBlocks = botTunnel[tunnelWidth-2];
 	int topNewBlocks = topOldBlocks + (rand()%1);
 	int botNewBlocks = botOldBlocks + (rand()%1);
 
 	if(topNewBlocks > tunnelHeight) topNewBlocks--;
 	if(botNewBlocks > tunnelHeight) topNewBlocks--;
 
-	topTunnel[tunnelWidth] = topNewBlocks;
-	botTunnel[tunnelWidth] = topOldBlocks;
+	topTunnel[tunnelWidth-1] = topNewBlocks;
+	botTunnel[tunnelWidth-1] = topOldBlocks;
 }
 
 bool checkTunnelOverlap(int x, int y)

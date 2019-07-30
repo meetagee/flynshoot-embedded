@@ -1,3 +1,4 @@
+application/Makefile
 application/sources/ak/inc/ak.h
 application/sources/ak/inc/ak_dbg.h
 application/sources/ak/inc/fsm.h
@@ -12,7 +13,6 @@ application/sources/ak/src/task.c
 application/sources/ak/src/timer.c
 application/sources/ak/src/tsm.c
 application/sources/app/Makefile.mk
-application/sources/app/activeObj.h
 application/sources/app/activeObj.h
 application/sources/app/app.cpp
 application/sources/app/app.cpp
