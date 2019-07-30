@@ -13,7 +13,6 @@
 
 // prototype
 void spawnMissile(void);
-void clearMissile(void);
 void renderMissile(void);
 bool MISSILE_HIT_TUNNEL(void);
 bool MISSILE_HIT_MINE(void);
@@ -21,6 +20,7 @@ bool MISSILE_HIT_MINE(void);
 uint8_t missile_bmp[MISSILE_LENGTH];
 uint8_t missileX, missileY;
 uint8_t score;
+static bool draw = false;
 
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
@@ -31,13 +31,12 @@ void task_control_missile(ak_msg_t* msg) {
 			break;
 
 		case(AC_MISSILE_FLYING): {
-			xprintf("missileX in FLYING: %d\n", missileX);
-			xprintf("missileY in FLYING: %d\n", missileY);
 			APP_DBG_SIG("AC_MISSILE_FLYING \n");
-			if(missileX < tunnelWidth) {
+			if(missileX + MISSILE_SPEED_X < tunnelWidth) {
 				missileX += MISSILE_SPEED_X;
 				renderMissile();
-				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_FLYING);
+				draw = true;
+				timer_set(AC_MISSILE_ID, AC_MISSILE_FLYING, 50, TIMER_PERIODIC);
 			}
 
 			else if (MISSILE_HIT_MINE()) {
@@ -50,7 +49,9 @@ void task_control_missile(ak_msg_t* msg) {
 			}
 
 			else {
-				screenObj.clear();
+				draw = false;
+				screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, BLACK); // Clear the last block
+				timer_remove_attr(AC_MISSILE_ID, AC_MISSILE_FLYING);
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
 			}
 		}
@@ -74,8 +75,13 @@ void spawnMissile(void){
 
 
 void renderMissile (void) {
-	screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, WHITE);
-	screenObj.update();
+	if(draw == false) {
+		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, WHITE);
+	}
+	else {
+		screenObj.fillRect(missileX - MISSILE_SPEED_X, missileY, MISSILE_LENGTH, 2, BLACK);
+		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, WHITE);
+	}
 }
 
 bool MISSILE_HIT_TUNNEL (void) {
