@@ -1,6 +1,5 @@
 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o: \
- sources/app/flynshoot_missile.cpp sources/app/flynshoot_missile.h \
- sources/app/flynshoot_mines.h sources/app/app.h sources/ak/inc/ak.h \
+ sources/app/flynshoot_missile.cpp sources/app/app.h sources/ak/inc/ak.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/string.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/_ansi.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/newlib.h \
@@ -93,4 +92,6 @@ build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o: \
  sources/platform/stm32l/arduino/cores/stm32/pgmspace.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/inttypes.h \
  sources/ak/inc/timer.h sources/ak/inc/timer.h \
- sources/app/flynshoot_ship.h
+ sources/app/flynshoot_ship.h sources/app/flynshoot_missile.h \
+ sources/app/flynshoot_mines.h sources/app/flynshoot_display.h \
+ sources/app/flynshoot_game_control.h
