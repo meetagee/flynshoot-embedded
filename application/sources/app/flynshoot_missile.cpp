@@ -86,6 +86,7 @@ void renderMissile (void) {
 	for(uint8_t i = 0; i < MISSILE_LENGTH; i++) {
 		screenObj.drawPixel(missileX + i, missileY, WHITE);
 	}
+	screenObj.update();
 }
 
 bool MISSILE_HIT_TUNNEL (void) {
