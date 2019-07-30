@@ -180,6 +180,7 @@ void app_task_init() {
 
 	task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_INIT);
 	task_post_pure_msg(AC_GAME_CONTROL_ID,AC_GAME_CONTROL_UPDATE);
+	task_post_pure_msg(AC_SHIP_ID,AC_SHIP_PARKED);
 }
 
 /*****************************************************************************/
