@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-flynshoot_display.cpp:69:6:bool checkTunnelOverlap(int, int)	0	static
-flynshoot_display.cpp:99:1:cpp)	0	static
-flynshoot_display.cpp:99:1:cpp)	0	static
-flynshoot_display.cpp:16:6:void task_control_display(ak_msg_t*)	40	static
-=======
-flynshoot_display.cpp:67:6:bool checkTunnelOverlap(int, int)	0	static
-flynshoot_display.cpp:97:1:cpp)	0	static
-flynshoot_display.cpp:97:1:cpp)	0	static
-flynshoot_display.cpp:14:6:void task_control_display(ak_msg_t*)	40	static
->>>>>>> ffb3618ba52a7cf90ae1cb9becc657b1fe5d862f
+flynshoot_display.cpp:72:6:bool checkTunnelOverlap(int, int)	0	static
+flynshoot_display.cpp:101:1:cpp)	0	static
+flynshoot_display.cpp:101:1:cpp)	0	static
+flynshoot_display.cpp:19:6:void task_control_display(ak_msg_t*)	40	static

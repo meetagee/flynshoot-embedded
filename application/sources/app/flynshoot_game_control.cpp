@@ -7,7 +7,7 @@ void task_control_game(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_GAME_CONTROL_UPDATE): {
 	//		timer_set(AC_SHIP_ID, AC_SHIP_ACTIVE, DEFAULT_TIME_TICK, TIMER_PERIODIC);
-	//		timer_set(AC_MISSILE_ID, AC_MISSILE_ARMED, DEFAULT_TIME_TICK, TIMER_PERIODIC);
+			task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
 			timer_set(AC_DISPLAY_ID,AC_FLYNSHOOT_UPDATE_TUNNEL,50,TIMER_PERIODIC);
 		}
 		break;

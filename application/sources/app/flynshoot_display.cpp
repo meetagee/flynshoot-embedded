@@ -42,7 +42,7 @@ void task_control_display(ak_msg_t* msg) {
 
 		case AC_FLYNSHOOT_UPDATE_TUNNEL:
 		{
-			APP_DBG("UPDATE TUNNEL \n");
+			//APP_DBG("UPDATE TUNNEL \n");
 			updateTunnel();
 			task_post_pure_msg(AC_DISPLAY_ID,AC_FLYNSHOOT_DRAW_TUNNEL);
 		}
@@ -87,7 +87,6 @@ bool checkTunnelOverlap(int x, int y)
 }
 
 static void drawTunnel(){
-
 	for(int i = 0; i < tunnelWidth; i++)
 	{
 		screenObj.fillRect(i,-1,1,10,BLACK);

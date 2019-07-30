@@ -2,11 +2,12 @@
 #define __FLYNSHOOT_SHIP_H__
 
 //int* getShipCoordinates()
+#include <stdint.h>
 
 #define shipHeight 4
 #define shipWidth 5
 
-extern int ship[shipHeight][shipWidth];
-extern int shipx, shipy;
+extern uint8_t ship[shipHeight][shipWidth];
+extern uint8_t shipx, shipy;
 
 #endif // FLYNSHOOT_SHIP_H

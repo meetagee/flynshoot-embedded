@@ -3,6 +3,7 @@
 #include "Adafruit_ssd1306syp.h"
 #include "message.h"
 #include "timer.h"
+#include "app_dbg.h"
 
 #include "flynshoot_ship.h"
 #include "flynshoot_missile.h"
@@ -11,7 +12,7 @@
 #include "flynshoot_game_control.h"
 
 // prototype
-void spawnMissile(uint8_t shipX, uint8_t shipY);
+void spawnMissile(void);
 void clearMissile(void);
 void renderMissile(void);
 bool MISSILE_HIT_TUNNEL(void);
@@ -20,20 +21,23 @@ bool MISSILE_HIT_MINE(void);
 uint8_t missile_bmp[MISSILE_LENGTH];
 uint8_t missileX, missileY;
 uint8_t score;
-static bool initBmp = false;
 
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_MISSILE_ARMED): {
-			spawnMissile((uint8_t)shipx, (uint8_t)shipy);
+			APP_DBG_SIG("AC_MISSILE_ARMED \n");
+			spawnMissile();
 		}
 			break;
 
 		case(AC_MISSILE_FLYING): {
-			if(missileX + MISSILE_SPEED_X < tunnelWidth) {
+			xprintf("missileX in FLYING: %d\n", missileX);
+			xprintf("missileY in FLYING: %d\n", missileY);
+			APP_DBG_SIG("AC_MISSILE_FLYING \n");
+			if(missileX < tunnelWidth) {
 				missileX += MISSILE_SPEED_X;
-				timer_set(AC_MISSILE_ID, AC_MISSILE_FLYING, DEFAULT_TIME_TICK, TIMER_PERIODIC);
 				renderMissile();
+				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_FLYING);
 			}
 
 			else if (MISSILE_HIT_MINE()) {
@@ -46,14 +50,14 @@ void task_control_missile(ak_msg_t* msg) {
 			}
 
 			else {
+				screenObj.clear();
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
 			}
 		}
 			break;
 
 		case(AC_MISSILE_EXPLODING) : {
-			clearMissile();
-			renderMissile();
+			APP_DBG_SIG("AC_MISSILE_EXPLODING \n");
 			task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
 			break;
 		}
@@ -63,41 +67,26 @@ void task_control_missile(ak_msg_t* msg) {
 	}
 }
 
-
-void spawnMissile(uint8_t shipX, uint8_t shipY){
-	if(!initBmp) {
-		for(uint8_t i = 0; i < MISSILE_LENGTH; i++) {
-			missile_bmp[i] = 1;
-		}
-		initBmp = true;
-	}
-	missileX = shipX;
-	missileY = shipY;
+void spawnMissile(void){
+	missileX = 0;
+	missileY = 30;
 }
 
-void clearMissile (void) {
-	initBmp = false;
-	for(uint8_t i = 0; i < MISSILE_LENGTH; i++) {
-		missile_bmp[i] = 0;
-	}
-}
 
 void renderMissile (void) {
-	for(uint8_t i = 0; i < MISSILE_LENGTH; i++) {
-		screenObj.drawPixel(missileX + i, missileY, WHITE);
-	}
+	screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, WHITE);
 	screenObj.update();
 }
 
 bool MISSILE_HIT_TUNNEL (void) {
 	// TODO: check if missile hits tunnel
 	// return true if yes, otw false
-	return true;
+	return false;
 }
 
 bool MISSILE_HIT_MINE(void) {
 	// TODO: check if missile hits mine
 	// return true if yes, otw false
-	return true;
+	return false;
 }
 

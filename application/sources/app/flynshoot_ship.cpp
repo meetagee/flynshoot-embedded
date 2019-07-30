@@ -2,13 +2,13 @@
 #include "task_list.h"
 #include "app.h"
 
-int ship[shipHeight][shipWidth] = {{1,0,0,0,0},
+uint8_t ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 								   {1,1,0,0,0},
 								   {1,1,1,1,1,},
 								   {1,1,1,1,1,},};
 
-int shipx = 0; // Test
-int shipy = 40; // Test
+uint8_t shipx; // Test
+uint8_t shipy; // Test
 
 void task_control_ship(ak_msg_t* msg) {
 	switch(msg->sig) {
