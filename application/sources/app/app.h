@@ -180,6 +180,9 @@ enum {
 	AC_SHIP_PARKED,
 	AC_SHIP_FLYING,
 	AC_SHIP_EXPLODING,
+	AC_SHIP_UP,
+	AC_SHIP_DOWN,
+
 };
 
 /*****************************************************************************/

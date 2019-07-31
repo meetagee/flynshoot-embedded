@@ -21,6 +21,7 @@ uint8_t missile_bmp[MISSILE_LENGTH];
 uint8_t missileX, missileY;
 uint8_t score;
 static bool draw = false;
+static bool endOfLine = false;
 
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
@@ -49,8 +50,9 @@ void task_control_missile(ak_msg_t* msg) {
 			}
 
 			else {
-				draw = false;
-				screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, BLACK); // Clear the last block
+				endOfLine = true;
+				renderMissile();
+				endOfLine= false;
 				timer_remove_attr(AC_MISSILE_ID, AC_MISSILE_FLYING);
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
 			}
@@ -69,14 +71,17 @@ void task_control_missile(ak_msg_t* msg) {
 }
 
 void spawnMissile(void){
-	missileX = 0;
-	missileY = 30;
+	missileX = shipx;
+	missileY = shipy;
 }
 
 
 void renderMissile (void) {
-	if(draw == false) {
+	if(!draw) {
 		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, WHITE);
+	}
+	else if (endOfLine) {
+		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, 2, BLACK);
 	}
 	else {
 		screenObj.fillRect(missileX - MISSILE_SPEED_X, missileY, MISSILE_LENGTH, 2, BLACK);
