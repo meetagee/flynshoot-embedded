@@ -1,1 +1,3 @@
+flynshoot_ship.cpp:51:6:void checkDeath()	40	static
+flynshoot_ship.cpp:69:6:void drawShip()	40	static
 flynshoot_ship.cpp:20:6:void task_control_ship(ak_msg_t*)	48	static

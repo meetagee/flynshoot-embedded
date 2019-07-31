@@ -2,6 +2,7 @@
 #include "app.h"
 #include "task_list.h"
 #include "app_dbg.h"
+#include "flynshoot_ship.h"
 
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
@@ -37,6 +38,7 @@ void task_control_display(ak_msg_t* msg) {
 			screenObj.setCursor(85,5);
 			screenObj.print("display");
 			drawTunnel();
+			checkDeath();
 		}
 		break;
 
@@ -69,33 +71,33 @@ static void updateTunnel(){
 	botTunnel[tunnelWidth-1] = botNewBlocks;
 }
 
-bool checkTunnelOverlap(int x, int y)
+bool checkTunnelOverlap(uint8_t x, uint8_t y)
 {
-	if(y<=5)
+	if(y<=20)
 	{
-		int sizeTunnel = topTunnel[x];
+		int sizeTunnel = 4*topTunnel[x];
 		if(sizeTunnel >= y) return true;
 	}
 
-
-	if(y>=55)
+	if(y>=40)
 	{
-		int sizeTunnel = botTunnel[x];
+		int sizeTunnel = 4*botTunnel[x];
 		if(sizeTunnel >= 60-y) return true;
 	}
 	return false;
 }
 
+
 static void drawTunnel(){
 	for(int i = 0; i < tunnelWidth; i++)
 	{
-		screenObj.fillRect(i,-1,1,10,BLACK);
-		screenObj.fillRect(i,-1,1,2*topTunnel[i],WHITE);
+		screenObj.fillRect(2*i,-1,2,20,BLACK);
+		screenObj.fillRect(2*i,-1,2,4*topTunnel[i],WHITE);
 	}
 	for(int i = 0; i < tunnelWidth; i++)
 	{
-		screenObj.fillRect(i,60,1,-10,BLACK);
-		screenObj.fillRect(i,60,1,2*-botTunnel[i],WHITE);
+		screenObj.fillRect(2*i,60,2,-20,BLACK);
+		screenObj.fillRect(2*i,60,2,4*-botTunnel[i],WHITE);
 	}
-	screenObj.update();
+	drawShip();
 }

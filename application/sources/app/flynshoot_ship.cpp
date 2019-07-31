@@ -13,7 +13,7 @@ uint8_t ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 uint8_t shipx;
 uint8_t shipy;
 
-static void drawShip();
+void drawShip();
 static void updateShipUp();
 static void updateShipDown();
 
@@ -48,8 +48,25 @@ void task_control_ship(ak_msg_t* msg) {
 			break;
 	}
 }
-
-static void drawShip(){
+void checkDeath()
+{
+	screenObj.fillRect(85,25,50,10,BLACK);
+	for(uint8_t j = 0; j < shipHeight; j++)
+	{
+		for(uint8_t i = 0; i < shipWidth; i++)
+		{
+			if(ship[j][i] == 1)
+			{
+				if(checkTunnelOverlap(shipx + 2*i, (shipy + 2*j)+2))
+				{
+					screenObj.setCursor(85,25);
+					screenObj.print("overlap");
+				}
+			}
+		}
+	}
+}
+void drawShip(){
 	for(uint8_t j = 0; j < shipHeight; j++)
 	{
 		for(uint8_t i = 0; i < shipWidth; i++)
