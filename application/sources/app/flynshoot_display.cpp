@@ -75,13 +75,13 @@ bool checkTunnelOverlap(uint8_t x, uint8_t y)
 {
 	if(y<=20)
 	{
-		int sizeTunnel = 4*topTunnel[x];
+		int sizeTunnel = 2*topTunnel[x];
 		if(sizeTunnel >= y) return true;
 	}
 
 	if(y>=40)
 	{
-		int sizeTunnel = 4*botTunnel[x];
+		int sizeTunnel = 2*botTunnel[x];
 		if(sizeTunnel >= 60-y) return true;
 	}
 	return false;
@@ -91,13 +91,13 @@ bool checkTunnelOverlap(uint8_t x, uint8_t y)
 static void drawTunnel(){
 	for(int i = 0; i < tunnelWidth; i++)
 	{
-		screenObj.fillRect(2*i,-1,2,20,BLACK);
-		screenObj.fillRect(2*i,-1,2,4*topTunnel[i],WHITE);
+		screenObj.fillRect(i,-1,2,10,BLACK);
+		screenObj.fillRect(i,-1,2,2*topTunnel[i],WHITE);
 	}
 	for(int i = 0; i < tunnelWidth; i++)
 	{
-		screenObj.fillRect(2*i,60,2,-20,BLACK);
-		screenObj.fillRect(2*i,60,2,4*-botTunnel[i],WHITE);
+		screenObj.fillRect(i,60,2,-10,BLACK);
+		screenObj.fillRect(i,60,2,2*-botTunnel[i],WHITE);
 	}
 	drawShip();
 }

@@ -4,7 +4,7 @@
 #include "Adafruit_ssd1306syp.h"
 
 #define tunnelHeight 5
-#define tunnelWidth 40
+#define tunnelWidth 80
 
 extern Adafruit_ssd1306syp screenObj;
 
