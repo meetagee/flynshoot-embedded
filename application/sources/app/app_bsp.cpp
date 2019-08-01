@@ -44,6 +44,7 @@ void btn_up_callback(void* b) {
 	switch (me_b->state) {
 	case BUTTON_SW_STATE_PRESSED: {
 		APP_DBG("[btn_up_callback] BUTTON_SW_STATE_PRESSED\n");
+		task_post_pure_msg(AC_SHIP_ID,AC_SHIP_UP);
 	}
 		break;
 
@@ -54,7 +55,6 @@ void btn_up_callback(void* b) {
 
 	case BUTTON_SW_STATE_RELEASED: {
 		APP_DBG("[btn_up_callback] BUTTON_SW_STATE_RELEASED\n");
-		task_post_pure_msg(AC_SHIP_ID,AC_SHIP_UP);
 	}
 		break;
 
@@ -68,6 +68,7 @@ void btn_down_callback(void* b) {
 	switch (me_b->state) {
 	case BUTTON_SW_STATE_PRESSED: {
 		APP_DBG("[btn_down_callback] BUTTON_SW_STATE_PRESSED\n");
+		task_post_pure_msg(AC_SHIP_ID,AC_SHIP_DOWN);
 	}
 		break;
 
@@ -78,8 +79,6 @@ void btn_down_callback(void* b) {
 
 	case BUTTON_SW_STATE_RELEASED: {
 		APP_DBG("[btn_down_callback] BUTTON_SW_STATE_RELEASED\n");
-		task_post_pure_msg(AC_SHIP_ID,AC_SHIP_DOWN);
-
 	}
 		break;
 
