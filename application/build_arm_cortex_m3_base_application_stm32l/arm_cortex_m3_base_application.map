@@ -1918,11 +1918,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .data          0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .bss           0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .text._Z16MISSILE_HIT_MINEv
-                0x0000000000000000        0x4 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .text._Z18MISSILE_HIT_TUNNELv
+                0x0000000000000000       0x3c build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .bss.missile_bmp
                 0x0000000000000000        0x5 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .bss.score     0x0000000000000000        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .text          0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
  .data          0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
  .bss           0x0000000000000000        0x0 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
@@ -4656,7 +4655,7 @@ Linker script and memory map
                 0x0000000008003000                isr_vector
                 0x00000000080030f4                . = ALIGN (0x4)
 
-.text           0x00000000080030f8     0xc454
+.text           0x00000000080030f8     0xc514
                 0x00000000080030f8                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080030f8        0x4 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
@@ -5582,558 +5581,560 @@ Linker script and memory map
                 0x00000000080099d4                task_control_game(ak_msg_t*)
  *fill*         0x00000000080099f6        0x2 
  .text._Z11minePassScrv
-                0x00000000080099f8       0x20 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x00000000080099f8       0x24 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
                 0x00000000080099f8                minePassScr()
  .text._Z9minesInitv
-                0x0000000008009a18       0x74 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
-                0x0000000008009a18                minesInit()
+                0x0000000008009a1c       0x90 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x0000000008009a1c                minesInit()
  .text._Z11renderMinesv
-                0x0000000008009a8c       0x50 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
-                0x0000000008009a8c                renderMines()
+                0x0000000008009aac       0x7c build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x0000000008009aac                renderMines()
  .text._Z11updateMinesv
-                0x0000000008009adc       0x44 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
-                0x0000000008009adc                updateMines()
+                0x0000000008009b28       0x44 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x0000000008009b28                updateMines()
  .text._Z18task_control_minesP8ak_msg_t
-                0x0000000008009b20       0x54 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
-                0x0000000008009b20                task_control_mines(ak_msg_t*)
+                0x0000000008009b6c       0x58 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x0000000008009b6c                task_control_mines(ak_msg_t*)
  .text._Z12spawnMissilev
-                0x0000000008009b74       0x24 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000008009b74                spawnMissile()
- .text._Z18MISSILE_HIT_TUNNELv
-                0x0000000008009b98       0x3c build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000008009b98                MISSILE_HIT_TUNNEL()
+                0x0000000008009bc4       0x28 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000008009bc4                spawnMissile()
+ .text._Z16MISSILE_HIT_MINEv
+                0x0000000008009bec       0x60 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000008009bec                MISSILE_HIT_MINE()
  .text._Z13renderMissilev
-                0x0000000008009bd4       0x64 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000008009bd4                renderMissile()
+                0x0000000008009c4c       0x64 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000008009c4c                renderMissile()
  .text._Z12clearMissilev
-                0x0000000008009c38       0x20 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000008009c38                clearMissile()
+                0x0000000008009cb0       0x20 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000008009cb0                clearMissile()
  .text._Z20task_control_missileP8ak_msg_t
-                0x0000000008009c58       0x8c build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000008009c58                task_control_missile(ak_msg_t*)
+                0x0000000008009cd0       0xb0 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000008009cd0                task_control_missile(ak_msg_t*)
  .text._Z10checkDeathv
-                0x0000000008009ce4       0x8c build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
-                0x0000000008009ce4                checkDeath()
+                0x0000000008009d80       0x8c build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x0000000008009d80                checkDeath()
  .text._Z8drawShipv
-                0x0000000008009d70       0x6c build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
-                0x0000000008009d70                drawShip()
+                0x0000000008009e0c       0x6c build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x0000000008009e0c                drawShip()
  .text._Z17task_control_shipP8ak_msg_t
-                0x0000000008009ddc      0x1b0 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
-                0x0000000008009ddc                task_control_ship(ak_msg_t*)
+                0x0000000008009e78      0x1ac build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x0000000008009e78                task_control_ship(ak_msg_t*)
  .text._Z18checkTunnelOverlaphh
-                0x0000000008009f8c       0x30 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
-                0x0000000008009f8c                checkTunnelOverlap(unsigned char, unsigned char)
+                0x000000000800a024       0x30 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x000000000800a024                checkTunnelOverlap(unsigned char, unsigned char)
  .text.startup._GLOBAL__sub_I_topTunnel
-                0x0000000008009fbc        0xc build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x000000000800a054        0xc build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
  .text.exit._GLOBAL__sub_D_topTunnel
-                0x0000000008009fc8        0xc build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x000000000800a060        0xc build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
  .text._Z20task_control_displayP8ak_msg_t
-                0x0000000008009fd4      0x174 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
-                0x0000000008009fd4                task_control_display(ak_msg_t*)
+                0x000000000800a06c      0x174 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x000000000800a06c                task_control_display(ak_msg_t*)
  .text._Z22view_render_display_onv
-                0x000000000800a148        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
-                0x000000000800a148                view_render_display_on()
+                0x000000000800a1e0        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
+                0x000000000800a1e0                view_render_display_on()
  .text.startup._GLOBAL__sub_I_view_render
-                0x000000000800a154        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
+                0x000000000800a1ec        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
  .text.exit._GLOBAL__sub_D_view_render
-                0x000000000800a160        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
+                0x000000000800a1f8        0xc build_arm_cortex_m3_base_application_stm32l/view_render.o
  .text._ZN12Adafruit_GFX8drawLineEsssst
-                0x000000000800a16c       0xbe build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a16c                Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
+                0x000000000800a204       0xbe build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a204                Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8drawRectEsssst
-                0x000000000800a22a       0x5e build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a22a                Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
+                0x000000000800a2c2       0x5e build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a2c2                Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX13drawFastVLineEssst
-                0x000000000800a288       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a288                Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
+                0x000000000800a320       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a320                Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX13drawFastHLineEssst
-                0x000000000800a2a4       0x1a build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a2a4                Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
+                0x000000000800a33c       0x1a build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a33c                Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8fillRectEsssst
-                0x000000000800a2be       0x38 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a2be                Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
+                0x000000000800a356       0x38 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a356                Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX10fillScreenEt
-                0x000000000800a2f6       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a2f6                Adafruit_GFX::fillScreen(unsigned short)
+                0x000000000800a38e       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a38e                Adafruit_GFX::fillScreen(unsigned short)
  .text._ZN12Adafruit_GFX13invertDisplayEb
-                0x000000000800a312        0x2 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a312                Adafruit_GFX::invertDisplay(bool)
+                0x000000000800a3aa        0x2 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a3aa                Adafruit_GFX::invertDisplay(bool)
  .text._ZN12Adafruit_GFXC2Ess
-                0x000000000800a314       0x28 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a314                Adafruit_GFX::Adafruit_GFX(short, short)
-                0x000000000800a314                Adafruit_GFX::Adafruit_GFX(short, short)
+                0x000000000800a3ac       0x28 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a3ac                Adafruit_GFX::Adafruit_GFX(short, short)
+                0x000000000800a3ac                Adafruit_GFX::Adafruit_GFX(short, short)
  .text._ZN12Adafruit_GFX16fillCircleHelperEssshst
-                0x000000000800a33c      0x134 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a33c                Adafruit_GFX::fillCircleHelper(short, short, short, unsigned char, short, unsigned short)
+                0x000000000800a3d4      0x134 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a3d4                Adafruit_GFX::fillCircleHelper(short, short, short, unsigned char, short, unsigned short)
  .text._ZN12Adafruit_GFX10fillCircleEssst
-                0x000000000800a470       0x48 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a470                Adafruit_GFX::fillCircle(short, short, short, unsigned short)
+                0x000000000800a508       0x48 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a508                Adafruit_GFX::fillCircle(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX7drawSunEssst
-                0x000000000800a4b8       0xd0 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a4b8                Adafruit_GFX::drawSun(short, short, short, unsigned short)
+                0x000000000800a550       0xd0 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a550                Adafruit_GFX::drawSun(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8drawCharEsshtth
-                0x000000000800a588      0x110 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a588                Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char)
+                0x000000000800a620      0x110 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a620                Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char)
  .text._ZN12Adafruit_GFX5writeEh
-                0x000000000800a698       0x6c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a698                Adafruit_GFX::write(unsigned char)
+                0x000000000800a730       0x6c build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a730                Adafruit_GFX::write(unsigned char)
  .text._ZN12Adafruit_GFX9setCursorEss
-                0x000000000800a704        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a704                Adafruit_GFX::setCursor(short, short)
+                0x000000000800a79c        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a79c                Adafruit_GFX::setCursor(short, short)
  .text._ZN12Adafruit_GFX11setTextSizeEh
-                0x000000000800a70a        0xa build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a70a                Adafruit_GFX::setTextSize(unsigned char)
+                0x000000000800a7a2        0xa build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a7a2                Adafruit_GFX::setTextSize(unsigned char)
  .text._ZN12Adafruit_GFX12setTextColorEt
-                0x000000000800a714        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a714                Adafruit_GFX::setTextColor(unsigned short)
+                0x000000000800a7ac        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a7ac                Adafruit_GFX::setTextColor(unsigned short)
  .text._ZN12Adafruit_GFX5widthEv
-                0x000000000800a71a        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a71a                Adafruit_GFX::width()
+                0x000000000800a7b2        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a7b2                Adafruit_GFX::width()
  .text._ZN12Adafruit_GFX6heightEv
-                0x000000000800a720        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800a720                Adafruit_GFX::height()
+                0x000000000800a7b8        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800a7b8                Adafruit_GFX::height()
  .text._ZN19Adafruit_ssd1306syp9updateRowEii
-                0x000000000800a726       0x1e build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a726                Adafruit_ssd1306syp::updateRow(int, int)
+                0x000000000800a7be       0x1e build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a7be                Adafruit_ssd1306syp::updateRow(int, int)
  .text._ZN19Adafruit_ssd1306syp9drawPixelEsst
-                0x000000000800a744       0x5e build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a744                Adafruit_ssd1306syp::drawPixel(short, short, unsigned short)
- *fill*         0x000000000800a7a2        0x2 
+                0x000000000800a7dc       0x5e build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a7dc                Adafruit_ssd1306syp::drawPixel(short, short, unsigned short)
+ *fill*         0x000000000800a83a        0x2 
  .text._ZN19Adafruit_ssd1306sypC2Ev
-                0x000000000800a7a4       0x24 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a7a4                Adafruit_ssd1306syp::Adafruit_ssd1306syp()
-                0x000000000800a7a4                Adafruit_ssd1306syp::Adafruit_ssd1306syp()
+                0x000000000800a83c       0x24 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a83c                Adafruit_ssd1306syp::Adafruit_ssd1306syp()
+                0x000000000800a83c                Adafruit_ssd1306syp::Adafruit_ssd1306syp()
  .text._ZN19Adafruit_ssd1306sypD2Ev
-                0x000000000800a7c8        0x2 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a7c8                Adafruit_ssd1306syp::~Adafruit_ssd1306syp()
-                0x000000000800a7c8                Adafruit_ssd1306syp::~Adafruit_ssd1306syp()
+                0x000000000800a860        0x2 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a860                Adafruit_ssd1306syp::~Adafruit_ssd1306syp()
+                0x000000000800a860                Adafruit_ssd1306syp::~Adafruit_ssd1306syp()
  .text._ZN19Adafruit_ssd1306syp5clearEb
-                0x000000000800a7ca       0x22 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a7ca                Adafruit_ssd1306syp::clear(bool)
+                0x000000000800a862       0x22 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a862                Adafruit_ssd1306syp::clear(bool)
  .text._ZN19Adafruit_ssd1306syp9writeByteEh
-                0x000000000800a7ec       0x54 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a7ec                Adafruit_ssd1306syp::writeByte(unsigned char)
+                0x000000000800a884       0x54 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a884                Adafruit_ssd1306syp::writeByte(unsigned char)
  .text._ZN19Adafruit_ssd1306syp8startIICEv
-                0x000000000800a840       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a840                Adafruit_ssd1306syp::startIIC()
+                0x000000000800a8d8       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a8d8                Adafruit_ssd1306syp::startIIC()
  .text._ZN19Adafruit_ssd1306syp7stopIICEv
-                0x000000000800a86c       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a86c                Adafruit_ssd1306syp::stopIIC()
+                0x000000000800a904       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a904                Adafruit_ssd1306syp::stopIIC()
  .text._ZN19Adafruit_ssd1306syp12writeCommandEh
-                0x000000000800a898       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a898                Adafruit_ssd1306syp::writeCommand(unsigned char)
+                0x000000000800a930       0x2c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a930                Adafruit_ssd1306syp::writeCommand(unsigned char)
  .text._ZN19Adafruit_ssd1306syp10initializeEv
-                0x000000000800a8c4      0x104 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a8c4                Adafruit_ssd1306syp::initialize()
+                0x000000000800a95c      0x104 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800a95c                Adafruit_ssd1306syp::initialize()
  .text._ZN19Adafruit_ssd1306syp10display_onEv
-                0x000000000800a9c8        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a9c8                Adafruit_ssd1306syp::display_on()
+                0x000000000800aa60        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800aa60                Adafruit_ssd1306syp::display_on()
  .text._ZN19Adafruit_ssd1306syp11display_offEv
-                0x000000000800a9ce        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a9ce                Adafruit_ssd1306syp::display_off()
+                0x000000000800aa66        0x6 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800aa66                Adafruit_ssd1306syp::display_off()
  .text._ZN19Adafruit_ssd1306syp17startDataSequenceEv
-                0x000000000800a9d4       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a9d4                Adafruit_ssd1306syp::startDataSequence()
+                0x000000000800aa6c       0x1c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800aa6c                Adafruit_ssd1306syp::startDataSequence()
  .text._ZN19Adafruit_ssd1306syp6updateEv
-                0x000000000800a9f0       0x56 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800a9f0                Adafruit_ssd1306syp::update()
+                0x000000000800aa88       0x56 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800aa88                Adafruit_ssd1306syp::update()
  .text._ZN19Adafruit_ssd1306syp9updateRowEi
-                0x000000000800aa46       0x6c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800aa46                Adafruit_ssd1306syp::updateRow(int)
+                0x000000000800aade       0x6c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800aade                Adafruit_ssd1306syp::updateRow(int)
  .text.eeprom_read
-                0x000000000800aab2        0x4 build_arm_cortex_m3_base_application_stm32l/eeprom.o
-                0x000000000800aab2                eeprom_read
+                0x000000000800ab4a        0x4 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+                0x000000000800ab4a                eeprom_read
  .text.eeprom_erase
-                0x000000000800aab6        0x4 build_arm_cortex_m3_base_application_stm32l/eeprom.o
-                0x000000000800aab6                eeprom_erase
- *fill*         0x000000000800aaba        0x2 
+                0x000000000800ab4e        0x4 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+                0x000000000800ab4e                eeprom_erase
+ *fill*         0x000000000800ab52        0x2 
  .text.startup._GLOBAL__sub_I__ZN9DhcpClass13beginWithDHCPEPhmm
-                0x000000000800aabc       0x1c build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+                0x000000000800ab54       0x1c build_arm_cortex_m3_base_application_stm32l/Dhcp.o
  .text.startup._GLOBAL__sub_I__ZN9DNSClient5beginERK9IPAddress
-                0x000000000800aad8       0x1c build_arm_cortex_m3_base_application_stm32l/Dns.o
+                0x000000000800ab70       0x1c build_arm_cortex_m3_base_application_stm32l/Dns.o
  .text.startup._GLOBAL__sub_I__ZN14EthernetClient8_srcportE
-                0x000000000800aaf4       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+                0x000000000800ab8c       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
  .text.startup._GLOBAL__sub_I__ZN13EthernetClass6_stateE
-                0x000000000800ab10       0x24 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+                0x000000000800aba8       0x24 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
  .text.startup._GLOBAL__sub_I__ZN14EthernetServerC2Et
-                0x000000000800ab34       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+                0x000000000800abcc       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
  .text.startup._GLOBAL__sub_I__ZN11EthernetUDPC2Ev
-                0x000000000800ab50       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+                0x000000000800abe8       0x1c build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
  .text._Z11zclParseHdrP13zclFrameHdr_tPh
-                0x000000000800ab6c       0x58 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
-                0x000000000800ab6c                zclParseHdr(zclFrameHdr_t*, unsigned char*)
+                0x000000000800ac04       0x58 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800ac04                zclParseHdr(zclFrameHdr_t*, unsigned char*)
  .text._Z20zclGetDataTypeLengthh
-                0x000000000800abc4       0x14 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
-                0x000000000800abc4                zclGetDataTypeLength(unsigned char)
+                0x000000000800ac5c       0x14 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800ac5c                zclGetDataTypeLength(unsigned char)
  .text._Z20zclGetAttrDataLengthhPht
-                0x000000000800abd8       0x34 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
-                0x000000000800abd8                zclGetAttrDataLength(unsigned char, unsigned char*, unsigned short)
+                0x000000000800ac70       0x34 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800ac70                zclGetAttrDataLength(unsigned char, unsigned char*, unsigned short)
  .text._Z21zcl_ProcessMessageMSGP17af_incoming_msg_t
-                0x000000000800ac0c      0x3c0 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
-                0x000000000800ac0c                zcl_ProcessMessageMSG(af_incoming_msg_t*)
+                0x000000000800aca4      0x3c0 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800aca4                zcl_ProcessMessageMSG(af_incoming_msg_t*)
  .text._ZN6zb_znp8calc_fcsEPhh.constprop.7
-                0x000000000800afcc       0x14 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b064       0x14 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
  .text._ZN6zb_znp18znp_frame_calc_fcsER12zigbee_msg_t
-                0x000000000800afe0       0x22 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800afe0                zb_znp::znp_frame_calc_fcs(zigbee_msg_t&)
+                0x000000000800b078       0x22 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b078                zb_znp::znp_frame_calc_fcs(zigbee_msg_t&)
  .text._ZN6zb_znp16znp_frame_parserEPhm
-                0x000000000800b002       0xf0 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b002                zb_znp::znp_frame_parser(unsigned char*, unsigned long)
+                0x000000000800b09a       0xf0 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b09a                zb_znp::znp_frame_parser(unsigned char*, unsigned long)
  .text._ZN6zb_znp19waiting_for_messageEt
-                0x000000000800b0f2       0x4c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b0f2                zb_znp::waiting_for_message(unsigned short)
+                0x000000000800b18a       0x4c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b18a                zb_znp::waiting_for_message(unsigned short)
  .text._ZN6zb_znp27set_tc_require_key_exchangeEh
-                0x000000000800b13e       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b13e                zb_znp::set_tc_require_key_exchange(unsigned char)
+                0x000000000800b1d6       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b1d6                zb_znp::set_tc_require_key_exchange(unsigned char)
  .text._ZN6zb_znp19set_startup_optionsEh.part.1
-                0x000000000800b17a       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b212       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
  .text._ZN6zb_znp22set_zigbee_device_typeEh.part.2
-                0x000000000800b1c0       0x48 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b258       0x48 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
  .text._ZN6zb_znp18waiting_for_statusEth
-                0x000000000800b208       0x54 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b208                zb_znp::waiting_for_status(unsigned short, unsigned char)
+                0x000000000800b2a0       0x54 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b2a0                zb_znp::waiting_for_status(unsigned short, unsigned char)
  .text._ZN6zb_znp14get_msg_returnEthPhPm
-                0x000000000800b25c       0x66 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b25c                zb_znp::get_msg_return(unsigned short, unsigned char, unsigned char*, unsigned long*)
+                0x000000000800b2f4       0x66 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b2f4                zb_znp::get_msg_return(unsigned short, unsigned char, unsigned char*, unsigned long*)
  .text._ZN6zb_znp33app_cnf_set_allowrejoin_tc_policyEh
-                0x000000000800b2c2       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b2c2                zb_znp::app_cnf_set_allowrejoin_tc_policy(unsigned char)
+                0x000000000800b35a       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b35a                zb_znp::app_cnf_set_allowrejoin_tc_policy(unsigned char)
  .text._ZN6zb_znp10soft_resetEv
-                0x000000000800b2fe       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b2fe                zb_znp::soft_reset()
+                0x000000000800b396       0x3c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b396                zb_znp::soft_reset()
  .text._ZN6zb_znp9set_panidEt
-                0x000000000800b33a       0x4e build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b33a                zb_znp::set_panid(unsigned short)
+                0x000000000800b3d2       0x4e build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b3d2                zb_znp::set_panid(unsigned short)
  .text._ZN6zb_znp18set_transmit_powerEh
-                0x000000000800b388       0x44 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b388                zb_znp::set_transmit_power(unsigned char)
+                0x000000000800b420       0x44 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b420                zb_znp::set_transmit_power(unsigned char)
  .text._ZN6zb_znp16set_channel_maskEhm
-                0x000000000800b3cc       0x54 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b3cc                zb_znp::set_channel_mask(unsigned char, unsigned long)
+                0x000000000800b464       0x54 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b464                zb_znp::set_channel_mask(unsigned char, unsigned long)
  .text._ZN6zb_znp31af_register_generic_applicationEh
-                0x000000000800b420       0x64 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b420                zb_znp::af_register_generic_application(unsigned char)
+                0x000000000800b4b8       0x64 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b4b8                zb_znp::af_register_generic_application(unsigned char)
  .text._ZN6zb_znp23bdb_start_commissioningEhhh
-                0x000000000800b484       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b484                zb_znp::bdb_start_commissioning(unsigned char, unsigned char, unsigned char)
+                0x000000000800b51c       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b51c                zb_znp::bdb_start_commissioning(unsigned char, unsigned char, unsigned char)
  .text._ZN6zb_znp22set_permit_joining_reqEthh
-                0x000000000800b4ca       0x4e build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b4ca                zb_znp::set_permit_joining_req(unsigned short, unsigned char, unsigned char)
+                0x000000000800b562       0x4e build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b562                zb_znp::set_permit_joining_req(unsigned short, unsigned char, unsigned char)
  .text._ZN6zb_znp21zb_read_configurationEhPhPm
-                0x000000000800b518       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b518                zb_znp::zb_read_configuration(unsigned char, unsigned char*, unsigned long*)
- *fill*         0x000000000800b55e        0x2 
+                0x000000000800b5b0       0x46 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b5b0                zb_znp::zb_read_configuration(unsigned char, unsigned char*, unsigned long*)
+ *fill*         0x000000000800b5f6        0x2 
  .text._ZN6zb_znp17start_coordinatorEh
-                0x000000000800b560      0x2d4 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
-                0x000000000800b560                zb_znp::start_coordinator(unsigned char)
+                0x000000000800b5f8      0x2d4 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800b5f8                zb_znp::start_coordinator(unsigned char)
  .text.startup._GLOBAL__sub_I__ZN12PubSubClientC2Ev
-                0x000000000800b834       0x1c build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+                0x000000000800b8cc       0x1c build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
  .text._Z7pinModehh
-                0x000000000800b850       0xf0 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
-                0x000000000800b850                pinMode(unsigned char, unsigned char)
+                0x000000000800b8e8       0xf0 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+                0x000000000800b8e8                pinMode(unsigned char, unsigned char)
  .text._Z12digitalWritehh
-                0x000000000800b940       0xe0 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
-                0x000000000800b940                digitalWrite(unsigned char, unsigned char)
+                0x000000000800b9d8       0xe0 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+                0x000000000800b9d8                digitalWrite(unsigned char, unsigned char)
  .text._ZN5Print5writeEPKhj
-                0x000000000800ba20       0x22 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800ba20                Print::write(unsigned char const*, unsigned int)
+                0x000000000800bab8       0x22 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bab8                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5writeEPKc
-                0x000000000800ba42       0x20 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800ba42                Print::write(char const*)
+                0x000000000800bada       0x20 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bada                Print::write(char const*)
  .text._ZN5Print5printEPKc
-                0x000000000800ba62        0x8 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800ba62                Print::print(char const*)
+                0x000000000800bafa        0x8 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bafa                Print::print(char const*)
  .text._ZN5Print5printEc
-                0x000000000800ba6a        0x6 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800ba6a                Print::print(char)
+                0x000000000800bb02        0x6 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bb02                Print::print(char)
  .text._ZN5Print11printNumberEmh
-                0x000000000800ba70       0x3c build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800ba70                Print::printNumber(unsigned long, unsigned char)
+                0x000000000800bb08       0x3c build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bb08                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEmi
-                0x000000000800baac       0x16 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800baac                Print::print(unsigned long, int)
+                0x000000000800bb44       0x16 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bb44                Print::print(unsigned long, int)
  .text._ZN5Print5printEhi
-                0x000000000800bac2        0x4 build_arm_cortex_m3_base_application_stm32l/Print.o
-                0x000000000800bac2                Print::print(unsigned char, int)
+                0x000000000800bb5a        0x4 build_arm_cortex_m3_base_application_stm32l/Print.o
+                0x000000000800bb5a                Print::print(unsigned char, int)
  .text._ZNK9IPAddress7printToER5Print
-                0x000000000800bac6       0x3e build_arm_cortex_m3_base_application_stm32l/IPAddress.o
-                0x000000000800bac6                IPAddress::printTo(Print&) const
+                0x000000000800bb5e       0x3e build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+                0x000000000800bb5e                IPAddress::printTo(Print&) const
  .text._ZN9IPAddressC2Ev
-                0x000000000800bb04       0x10 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
-                0x000000000800bb04                IPAddress::IPAddress()
-                0x000000000800bb04                IPAddress::IPAddress()
+                0x000000000800bb9c       0x10 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+                0x000000000800bb9c                IPAddress::IPAddress()
+                0x000000000800bb9c                IPAddress::IPAddress()
  .text._ZN9IPAddressC2Ehhhh
-                0x000000000800bb14       0x18 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
-                0x000000000800bb14                IPAddress::IPAddress(unsigned char, unsigned char, unsigned char, unsigned char)
-                0x000000000800bb14                IPAddress::IPAddress(unsigned char, unsigned char, unsigned char, unsigned char)
+                0x000000000800bbac       0x18 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+                0x000000000800bbac                IPAddress::IPAddress(unsigned char, unsigned char, unsigned char, unsigned char)
+                0x000000000800bbac                IPAddress::IPAddress(unsigned char, unsigned char, unsigned char, unsigned char)
  .text._ZN8SPIClass9io_configEv
-                0x000000000800bb2c       0x68 build_arm_cortex_m3_base_application_stm32l/SPI.o
-                0x000000000800bb2c                SPIClass::io_config()
+                0x000000000800bbc4       0x68 build_arm_cortex_m3_base_application_stm32l/SPI.o
+                0x000000000800bbc4                SPIClass::io_config()
  .text._ZN8SPIClass5beginEv
-                0x000000000800bb94       0xe4 build_arm_cortex_m3_base_application_stm32l/SPI.o
-                0x000000000800bb94                SPIClass::begin()
+                0x000000000800bc2c       0xe4 build_arm_cortex_m3_base_application_stm32l/SPI.o
+                0x000000000800bc2c                SPIClass::begin()
  .text.startup._GLOBAL__sub_I__ZN8SPIClassC2Ev
-                0x000000000800bc78       0x14 build_arm_cortex_m3_base_application_stm32l/SPI.o
+                0x000000000800bd10       0x14 build_arm_cortex_m3_base_application_stm32l/SPI.o
  .text._ZN7TwoWire9availableEv
-                0x000000000800bc8c       0x14 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bc8c                TwoWire::available()
+                0x000000000800bd24       0x14 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bd24                TwoWire::available()
  .text._ZN7TwoWire4readEv
-                0x000000000800bca0       0x28 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bca0                TwoWire::read()
+                0x000000000800bd38       0x28 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bd38                TwoWire::read()
  .text._ZN7TwoWire4peekEv
-                0x000000000800bcc8       0x24 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bcc8                TwoWire::peek()
+                0x000000000800bd60       0x24 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bd60                TwoWire::peek()
  .text._ZN7TwoWire5flushEv
-                0x000000000800bcec        0x2 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bcec                TwoWire::flush()
- *fill*         0x000000000800bcee        0x2 
+                0x000000000800bd84        0x2 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bd84                TwoWire::flush()
+ *fill*         0x000000000800bd86        0x2 
  .text._ZN7TwoWire5writeEh
-                0x000000000800bcf0       0x54 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bcf0                TwoWire::write(unsigned char)
+                0x000000000800bd88       0x54 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bd88                TwoWire::write(unsigned char)
  .text._ZN7TwoWire5writeEPKhj
-                0x000000000800bd44       0x34 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800bd44                TwoWire::write(unsigned char const*, unsigned int)
+                0x000000000800bddc       0x34 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800bddc                TwoWire::write(unsigned char const*, unsigned int)
  .text.startup._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x000000000800bd78       0x1c build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800be10       0x1c build_arm_cortex_m3_base_application_stm32l/Wire.o
  .text._Z12twi_transmitPKhh
-                0x000000000800bd94       0x44 build_arm_cortex_m3_base_application_stm32l/twi.o
-                0x000000000800bd94                twi_transmit(unsigned char const*, unsigned char)
+                0x000000000800be2c       0x44 build_arm_cortex_m3_base_application_stm32l/twi.o
+                0x000000000800be2c                twi_transmit(unsigned char const*, unsigned char)
  .text.__cxa_pure_virtual
-                0x000000000800bdd8       0x1c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
-                0x000000000800bdd8                __cxa_pure_virtual
- .text._sbrk    0x000000000800bdf4       0x1c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
-                0x000000000800bdf4                _sbrk
- .text.malloc   0x000000000800be10       0x10 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000000800be10                malloc
- .text.free     0x000000000800be20       0x10 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000000800be20                free
+                0x000000000800be70       0x1c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+                0x000000000800be70                __cxa_pure_virtual
+ .text._sbrk    0x000000000800be8c       0x1c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+                0x000000000800be8c                _sbrk
+ .text.malloc   0x000000000800bea8       0x10 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
+                0x000000000800bea8                malloc
+ .text.free     0x000000000800beb8       0x10 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
+                0x000000000800beb8                free
  .text._malloc_r
-                0x000000000800be30      0x558 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x000000000800be30                _malloc_r
- .text.memcmp   0x000000000800c388       0x60 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
-                0x000000000800c388                memcmp
- .text.memset   0x000000000800c3e8       0xa0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
-                0x000000000800c3e8                memset
+                0x000000000800bec8      0x558 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x000000000800bec8                _malloc_r
+ .text.memcmp   0x000000000800c420       0x60 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
+                0x000000000800c420                memcmp
+ .text.memset   0x000000000800c480       0xa0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+                0x000000000800c480                memset
  .text.__malloc_lock
-                0x000000000800c488        0xc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000000800c488                __malloc_lock
+                0x000000000800c520        0xc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000000800c520                __malloc_lock
  .text.__malloc_unlock
-                0x000000000800c494        0xc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000000800c494                __malloc_unlock
- .text.rand     0x000000000800c4a0       0x3c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
-                0x000000000800c4a0                rand
- .text._sbrk_r  0x000000000800c4dc       0x24 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x000000000800c4dc                _sbrk_r
- .text.strcpy   0x000000000800c500       0xbc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
-                0x000000000800c500                strcpy
- .text.strlen   0x000000000800c5bc       0x5c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000000800c5bc                strlen
+                0x000000000800c52c        0xc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000000800c52c                __malloc_unlock
+ .text.rand     0x000000000800c538       0x3c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
+                0x000000000800c538                rand
+ .text._sbrk_r  0x000000000800c574       0x24 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x000000000800c574                _sbrk_r
+ .text.strcpy   0x000000000800c598       0xbc /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
+                0x000000000800c598                strcpy
+ .text.strlen   0x000000000800c654       0x5c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x000000000800c654                strlen
  .text._strtol_l.isra.0
-                0x000000000800c618      0x110 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
- .text.strtol   0x000000000800c728       0x18 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
-                0x000000000800c728                strtol
+                0x000000000800c6b0      0x110 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
+ .text.strtol   0x000000000800c7c0       0x18 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
+                0x000000000800c7c0                strtol
  .text._malloc_trim_r
-                0x000000000800c740       0xa0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
-                0x000000000800c740                _malloc_trim_r
- .text._free_r  0x000000000800c7e0      0x1f4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
-                0x000000000800c7e0                _free_r
+                0x000000000800c7d8       0xa0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
+                0x000000000800c7d8                _malloc_trim_r
+ .text._free_r  0x000000000800c878      0x1f4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
+                0x000000000800c878                _free_r
  .text.__retarget_lock_acquire_recursive
-                0x000000000800c9d4        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
-                0x000000000800c9d4                __retarget_lock_acquire_recursive
+                0x000000000800ca6c        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800ca6c                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x000000000800c9d8        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
-                0x000000000800c9d8                __retarget_lock_release_recursive
+                0x000000000800ca70        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800ca70                __retarget_lock_release_recursive
  *(.rodata)
  *(.rodata*)
  .rodata.task_create.str1.1
-                0x000000000800c9dc        0x3 build_arm_cortex_m3_base_application_stm32l/task.o
+                0x000000000800ca74        0x3 build_arm_cortex_m3_base_application_stm32l/task.o
  .rodata.timer_set.str1.1
-                0x000000000800c9df        0x3 build_arm_cortex_m3_base_application_stm32l/timer.o
+                0x000000000800ca77        0x3 build_arm_cortex_m3_base_application_stm32l/timer.o
  .rodata.ak_malloc.str1.1
-                0x000000000800c9e2        0xa build_arm_cortex_m3_base_application_stm32l/message.o
+                0x000000000800ca7a        0xa build_arm_cortex_m3_base_application_stm32l/message.o
  .rodata.msg_inc_ref_count.str1.1
-                0x000000000800c9ec        0x3 build_arm_cortex_m3_base_application_stm32l/message.o
+                0x000000000800ca84        0x3 build_arm_cortex_m3_base_application_stm32l/message.o
  .rodata.CSWTCH.90
-                0x000000000800c9ef       0x1b build_arm_cortex_m3_base_application_stm32l/qrcode.o
+                0x000000000800ca87       0x1b build_arm_cortex_m3_base_application_stm32l/qrcode.o
  .rodata.NUM_ERROR_CORRECTION_BLOCKS
-                0x000000000800ca0a       0xa0 build_arm_cortex_m3_base_application_stm32l/qrcode.o
+                0x000000000800caa2       0xa0 build_arm_cortex_m3_base_application_stm32l/qrcode.o
  .rodata.NUM_ERROR_CORRECTION_CODEWORDS
-                0x000000000800caaa      0x140 build_arm_cortex_m3_base_application_stm32l/qrcode.o
+                0x000000000800cb42      0x140 build_arm_cortex_m3_base_application_stm32l/qrcode.o
  .rodata.NUM_RAW_DATA_MODULES
-                0x000000000800cbea       0x50 build_arm_cortex_m3_base_application_stm32l/qrcode.o
+                0x000000000800cc82       0x50 build_arm_cortex_m3_base_application_stm32l/qrcode.o
  .rodata.sys_dbg_fatal.str1.1
-                0x000000000800cc3a        0x7 build_arm_cortex_m3_base_application_stm32l/sys_dbg.o
+                0x000000000800ccd2        0x7 build_arm_cortex_m3_base_application_stm32l/sys_dbg.o
  .rodata.exit_critical.str1.1
-                0x000000000800cc41        0x4 build_arm_cortex_m3_base_application_stm32l/platform.o
- *fill*         0x000000000800cc45        0x3 
+                0x000000000800ccd9        0x4 build_arm_cortex_m3_base_application_stm32l/platform.o
+ *fill*         0x000000000800ccdd        0x3 
  .rodata.default_handler.str1.4
-                0x000000000800cc48        0x3 build_arm_cortex_m3_base_application_stm32l/system.o
- *fill*         0x000000000800cc4b        0x1 
+                0x000000000800cce0        0x3 build_arm_cortex_m3_base_application_stm32l/system.o
+ *fill*         0x000000000800cce3        0x1 
  .rodata.sys_ctrl_soft_watchdog_increase_counter.str1.4
-                0x000000000800cc4c        0x5 build_arm_cortex_m3_base_application_stm32l/sys_cfg.o
- *fill*         0x000000000800cc51        0x3 
+                0x000000000800cce4        0x5 build_arm_cortex_m3_base_application_stm32l/sys_cfg.o
+ *fill*         0x000000000800cce9        0x3 
  .rodata.flash_transfer.str1.4
-                0x000000000800cc54        0x4 build_arm_cortex_m3_base_application_stm32l/io_cfg.o
+                0x000000000800ccec        0x4 build_arm_cortex_m3_base_application_stm32l/io_cfg.o
  .rodata.app_info
-                0x000000000800cc58        0x8 build_arm_cortex_m3_base_application_stm32l/app.o
-                0x000000000800cc58                app_info
+                0x000000000800ccf0        0x8 build_arm_cortex_m3_base_application_stm32l/app.o
+                0x000000000800ccf0                app_info
  .rodata._Z15btn_up_callbackPv.str1.1
-                0x000000000800cc60       0x99 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+                0x000000000800ccf8       0x99 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
  .rodata._Z17btn_down_callbackPv.str1.1
-                0x000000000800ccf9       0x9f build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+                0x000000000800cd91       0x9f build_arm_cortex_m3_base_application_stm32l/app_bsp.o
  .rodata._Z17btn_mode_callbackPv.str1.1
-                0x000000000800cd98       0x9f build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+                0x000000000800ce30       0x9f build_arm_cortex_m3_base_application_stm32l/app_bsp.o
  .rodata._ZL10shell_bootPh.str1.1
-                0x000000000800ce37      0x166 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800cecf      0x166 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL10shell_helpPh.str1.1
-                0x000000000800cf9d       0x24 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d035       0x24 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL11shell_fatalPh.str1.1
-                0x000000000800cfc1      0x21e build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d059      0x21e build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL11shell_flashPh.str1.1
-                0x000000000800d1df       0x5a build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d277       0x5a build_arm_cortex_m3_base_application_stm32l/shell.o
                                          0x62 (size before relaxing)
  .rodata._ZL11shell_resetPh.str1.1
-                0x000000000800d239        0x6 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d2d1        0x6 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL9shell_dbgPh.str1.1
-                0x000000000800d23f      0x110 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d2d7      0x110 build_arm_cortex_m3_base_application_stm32l/shell.o
                                         0x113 (size before relaxing)
  .rodata._ZL9shell_epsPh.str1.1
-                0x000000000800d34f       0x11 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d3e7       0x11 build_arm_cortex_m3_base_application_stm32l/shell.o
                                          0x1d (size before relaxing)
  .rodata._ZL9shell_lcdPh.str1.1
-                0x000000000800d360       0x49 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d3f8       0x49 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL9shell_ramPh.str1.1
-                0x000000000800d3a9       0x32 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d441       0x32 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL9shell_sttPh.str1.1
-                0x000000000800d3db       0x49 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d473       0x49 build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata._ZL9shell_verPh.str1.1
-                0x000000000800d424      0x160 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d4bc      0x160 build_arm_cortex_m3_base_application_stm32l/shell.o
                                         0x163 (size before relaxing)
  .rodata._ZN2ak5stackIZL9shell_dbgPhE6test_tLm3EE4pushERKS2_.str1.1
-                0x000000000800d584        0xa build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d61c        0xa build_arm_cortex_m3_base_application_stm32l/shell.o
  .rodata.str1.1
-                0x000000000800d58e       0xc6 build_arm_cortex_m3_base_application_stm32l/shell.o
+                0x000000000800d626       0xc6 build_arm_cortex_m3_base_application_stm32l/shell.o
                                          0xcb (size before relaxing)
  .rodata._Z10task_shellP8ak_msg_t.str1.4
-                0x000000000800d654       0x4e build_arm_cortex_m3_base_application_stm32l/task_shell.o
- *fill*         0x000000000800d6a2        0x2 
+                0x000000000800d6ec       0x4e build_arm_cortex_m3_base_application_stm32l/task_shell.o
+ *fill*         0x000000000800d73a        0x2 
  .rodata.sys_irq_shell.str1.4
-                0x000000000800d6a4       0x34 build_arm_cortex_m3_base_application_stm32l/task_shell.o
+                0x000000000800d73c       0x34 build_arm_cortex_m3_base_application_stm32l/task_shell.o
                                          0x31 (size before relaxing)
  .rodata._Z7task_fwP8ak_msg_t.str1.1
-                0x000000000800d6d8      0x206 build_arm_cortex_m3_base_application_stm32l/task_fw.o
+                0x000000000800d770      0x206 build_arm_cortex_m3_base_application_stm32l/task_fw.o
  .rodata._Z11task_zigbeeP8ak_msg_t.str1.1
-                0x000000000800d8de      0x3aa build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+                0x000000000800d976      0x3aa build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
  .rodata._ZN6zb_znp22zigbee_message_handlerER12zigbee_msg_t.str1.1
-                0x000000000800dc88      0x3b3 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+                0x000000000800dd20      0x3b3 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
  .rodata._Z7task_ifP8ak_msg_t.str1.1
-                0x000000000800e03b       0xa9 build_arm_cortex_m3_base_application_stm32l/task_if.o
+                0x000000000800e0d3       0xa9 build_arm_cortex_m3_base_application_stm32l/task_if.o
  .rodata._Z8task_dbgP8ak_msg_t.str1.1
-                0x000000000800e0e4      0x112 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
+                0x000000000800e17c      0x112 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
                                         0x11a (size before relaxing)
+ .rodata._Z11renderMinesv.str1.1
+                0x000000000800e28e       0x14 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
  .rodata._Z20task_control_missileP8ak_msg_t.str1.1
-                0x000000000800e1f6       0x55 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x000000000800e2a2       0x67 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .rodata._Z10checkDeathv.str1.1
-                0x000000000800e24b        0x8 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x000000000800e309        0x8 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
  .rodata._Z17task_control_shipP8ak_msg_t.str1.1
-                0x000000000800e253        0x5 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x000000000800e311        0x5 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
  .rodata._Z20task_control_displayP8ak_msg_t.str1.1
-                0x000000000800e258        0x8 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x000000000800e316        0x8 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
  .rodata._ZL4font
-                0x000000000800e260      0x4fb build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- *fill*         0x000000000800e75b        0x1 
+                0x000000000800e31e      0x4fb build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ *fill*         0x000000000800e819        0x3 
  .rodata._ZTV12Adafruit_GFX
-                0x000000000800e75c       0x30 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
-                0x000000000800e75c                vtable for Adafruit_GFX
+                0x000000000800e81c       0x30 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+                0x000000000800e81c                vtable for Adafruit_GFX
  .rodata._ZTV19Adafruit_ssd1306syp
-                0x000000000800e78c       0x40 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
-                0x000000000800e78c                vtable for Adafruit_ssd1306syp
+                0x000000000800e84c       0x40 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x000000000800e84c                vtable for Adafruit_ssd1306syp
  .rodata.CSWTCH.43
-                0x000000000800e7cc       0xea build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800e88c       0xea build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
  .rodata._Z21zcl_ProcessMessageMSGP17af_incoming_msg_t.str1.1
-                0x000000000800e8b6       0xa8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+                0x000000000800e976       0xa8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
  .rodata._ZN6zb_znp12start_routerEv.str1.1
-                0x000000000800e95e      0x380 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800ea1e      0x380 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
  .rodata._ZN6zb_znp17start_coordinatorEh.str1.1
-                0x000000000800ecde      0x736 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+                0x000000000800ed9e      0x736 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
                                         0x74f (size before relaxing)
  .rodata._Z7pinModehh.str1.1
-                0x000000000800f414        0x3 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- *fill*         0x000000000800f417        0x1 
+                0x000000000800f4d4        0x3 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ *fill*         0x000000000800f4d7        0x1 
  .rodata._ZTV9IPAddress
-                0x000000000800f418        0xc build_arm_cortex_m3_base_application_stm32l/IPAddress.o
-                0x000000000800f418                vtable for IPAddress
+                0x000000000800f4d8        0xc build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+                0x000000000800f4d8                vtable for IPAddress
  .rodata._ZTV7TwoWire
-                0x000000000800f424       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800f424                vtable for TwoWire
+                0x000000000800f4e4       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800f4e4                vtable for TwoWire
  .rodata.__cxa_pure_virtual.str1.1
-                0x000000000800f444        0x4 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+                0x000000000800f504        0x4 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
  .rodata._ctype_
-                0x000000000800f448      0x101 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-ctype_.o)
-                0x000000000800f448                _ctype_
+                0x000000000800f508      0x101 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-ctype_.o)
+                0x000000000800f508                _ctype_
  *(.glue_7)
- .glue_7        0x000000000800f549        0x0 linker stubs
+ .glue_7        0x000000000800f609        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800f549        0x0 linker stubs
+ .glue_7t       0x000000000800f609        0x0 linker stubs
  *(.init)
  *(.fini)
-                0x000000000800f54c                . = ALIGN (0x4)
- *fill*         0x000000000800f549        0x3 
-                0x000000000800f54c                _etext = .
+                0x000000000800f60c                . = ALIGN (0x4)
+ *fill*         0x000000000800f609        0x3 
+                0x000000000800f60c                _etext = .
 
-.vfp11_veneer   0x000000000800f54c        0x0
- .vfp11_veneer  0x000000000800f54c        0x0 linker stubs
+.vfp11_veneer   0x000000000800f60c        0x0
+ .vfp11_veneer  0x000000000800f60c        0x0 linker stubs
 
-.v4_bx          0x000000000800f54c        0x0
- .v4_bx         0x000000000800f54c        0x0 linker stubs
+.v4_bx          0x000000000800f60c        0x0
+ .v4_bx         0x000000000800f60c        0x0 linker stubs
 
-.iplt           0x000000000800f54c        0x0
- .iplt          0x000000000800f54c        0x0 build_arm_cortex_m3_base_application_stm32l/task.o
+.iplt           0x000000000800f60c        0x0
+ .iplt          0x000000000800f60c        0x0 build_arm_cortex_m3_base_application_stm32l/task.o
 
-.rel.dyn        0x000000000800f54c        0x0
- .rel.iplt      0x000000000800f54c        0x0 build_arm_cortex_m3_base_application_stm32l/task.o
+.rel.dyn        0x000000000800f60c        0x0
+ .rel.iplt      0x000000000800f60c        0x0 build_arm_cortex_m3_base_application_stm32l/task.o
 
-.preinit_array  0x000000000800f54c        0x0
-                0x000000000800f54c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000000800f60c        0x0
+                0x000000000800f60c                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  *(.preinit_array*)
-                0x000000000800f54c                PROVIDE (__preinit_array_end = .)
+                0x000000000800f60c                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000000800f54c       0x30
-                0x000000000800f54c                PROVIDE (__init_array_start = .)
+.init_array     0x000000000800f60c       0x30
+                0x000000000800f60c                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800f54c        0x4 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
- .init_array    0x000000000800f550        0x4 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .init_array    0x000000000800f554        0x4 build_arm_cortex_m3_base_application_stm32l/view_render.o
- .init_array    0x000000000800f558        0x4 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .init_array    0x000000000800f55c        0x4 build_arm_cortex_m3_base_application_stm32l/Dns.o
- .init_array    0x000000000800f560        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .init_array    0x000000000800f564        0x4 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .init_array    0x000000000800f568        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .init_array    0x000000000800f56c        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .init_array    0x000000000800f570        0x4 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .init_array    0x000000000800f574        0x4 build_arm_cortex_m3_base_application_stm32l/SPI.o
- .init_array    0x000000000800f578        0x4 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x000000000800f57c                PROVIDE (__init_array_end = .)
+ .init_array    0x000000000800f60c        0x4 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+ .init_array    0x000000000800f610        0x4 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .init_array    0x000000000800f614        0x4 build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .init_array    0x000000000800f618        0x4 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .init_array    0x000000000800f61c        0x4 build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .init_array    0x000000000800f620        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .init_array    0x000000000800f624        0x4 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .init_array    0x000000000800f628        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .init_array    0x000000000800f62c        0x4 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .init_array    0x000000000800f630        0x4 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .init_array    0x000000000800f634        0x4 build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .init_array    0x000000000800f638        0x4 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x000000000800f63c                PROVIDE (__init_array_end = .)
 
-.fini_array     0x000000000800f57c        0x8
+.fini_array     0x000000000800f63c        0x8
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x000000000800f57c        0x4 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .fini_array    0x000000000800f580        0x4 build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .fini_array    0x000000000800f63c        0x4 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .fini_array    0x000000000800f640        0x4 build_arm_cortex_m3_base_application_stm32l/view_render.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end = .)
 
-.end_flash      0x000000000800f584        0x0
-                0x000000000800f584                _end_flash = .
+.end_flash      0x000000000800f644        0x0
+                0x000000000800f644                _end_flash = .
 
 .start_ram      0x0000000020000000        0x0
                 0x0000000020000000                _start_ram = .
 
-.data           0x0000000020000000      0x9d8 load address 0x000000000800f584
+.data           0x0000000020000000      0x9d8 load address 0x000000000800f644
                 0x0000000020000000                _data = .
-                0x000000000800f584                _ldata = LOADADDR (.data)
+                0x000000000800f644                _ldata = LOADADDR (.data)
  *(vtable)
  *(.data)
  *(.data*)
@@ -6182,10 +6183,10 @@ Linker script and memory map
  *(.ram_func*)
                 0x00000000200009d8                _edata = .
 
-.igot.plt       0x00000000200009d8        0x0 load address 0x000000000800ff5c
+.igot.plt       0x00000000200009d8        0x0 load address 0x000000000801001c
  .igot.plt      0x00000000200009d8        0x0 build_arm_cortex_m3_base_application_stm32l/task.o
 
-.bss            0x00000000200009d8     0x2220 load address 0x000000000800ff5c
+.bss            0x00000000200009d8     0x221c load address 0x000000000801001c
                 0x00000000200009d8                _bss = .
  *(.bss)
  *(.bss*)
@@ -6293,136 +6294,138 @@ Linker script and memory map
                 0x000000002000214e      0x208 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
                 0x000000002000214e                zigbee_network
  .bss.mines_coords
-                0x0000000020002356        0xf build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+                0x0000000020002356        0x9 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
                 0x0000000020002356                mines_coords
- .bss._ZL4draw  0x0000000020002365        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .bss._ZL4draw  0x000000002000235f        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
  .bss._ZL9endOfLine
-                0x0000000020002366        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .bss.missileX  0x0000000020002367        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000020002367                missileX
- .bss.missileY  0x0000000020002368        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
-                0x0000000020002368                missileY
- .bss.shipx     0x0000000020002369        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
-                0x0000000020002369                shipx
- .bss.shipy     0x000000002000236a        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
-                0x000000002000236a                shipy
- *fill*         0x000000002000236b        0x1 
+                0x0000000020002360        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .bss.missileX  0x0000000020002361        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000020002361                missileX
+ .bss.missileY  0x0000000020002362        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000020002362                missileY
+ .bss.score     0x0000000020002363        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+                0x0000000020002363                score
+ .bss.shipx     0x0000000020002364        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x0000000020002364                shipx
+ .bss.shipy     0x0000000020002365        0x1 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+                0x0000000020002365                shipy
+ *fill*         0x0000000020002366        0x2 
  .bss.botTunnel
-                0x000000002000236c      0x140 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
-                0x000000002000236c                botTunnel
+                0x0000000020002368      0x140 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x0000000020002368                botTunnel
  .bss.screenObj
-                0x00000000200024ac       0x28 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
-                0x00000000200024ac                screenObj
+                0x00000000200024a8       0x28 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x00000000200024a8                screenObj
  .bss.topTunnel
-                0x00000000200024d4      0x140 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
-                0x00000000200024d4                topTunnel
+                0x00000000200024d0      0x140 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+                0x00000000200024d0                topTunnel
  .bss.view_render
-                0x0000000020002614       0x28 build_arm_cortex_m3_base_application_stm32l/view_render.o
-                0x0000000020002614                view_render
+                0x0000000020002610       0x28 build_arm_cortex_m3_base_application_stm32l/view_render.o
+                0x0000000020002610                view_render
  .bss._ZL12frame_buffer
-                0x000000002000263c      0x400 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+                0x0000000020002638      0x400 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a3c        0x8 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+                0x0000000020002a38        0x8 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a44        0x8 build_arm_cortex_m3_base_application_stm32l/Dns.o
+                0x0000000020002a40        0x8 build_arm_cortex_m3_base_application_stm32l/Dns.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a4c        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .bss.Ethernet  0x0000000020002a54        0xc build_arm_cortex_m3_base_application_stm32l/Ethernet.o
-                0x0000000020002a54                Ethernet
+                0x0000000020002a48        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .bss.Ethernet  0x0000000020002a50        0xc build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+                0x0000000020002a50                Ethernet
  .bss._ZL11INADDR_NONE
-                0x0000000020002a60        0x8 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+                0x0000000020002a5c        0x8 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a68        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+                0x0000000020002a64        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a70        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+                0x0000000020002a6c        0x8 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
  .bss._ZL11INADDR_NONE
-                0x0000000020002a78        0x8 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .bss.SPI       0x0000000020002a80       0x1c build_arm_cortex_m3_base_application_stm32l/SPI.o
-                0x0000000020002a80                SPI
- .bss.Wire      0x0000000020002a9c       0x10 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002a9c                Wire
+                0x0000000020002a74        0x8 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .bss.SPI       0x0000000020002a7c       0x1c build_arm_cortex_m3_base_application_stm32l/SPI.o
+                0x0000000020002a7c                SPI
+ .bss.Wire      0x0000000020002a98       0x10 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002a98                Wire
  .bss._ZN7TwoWire12transmittingE
-                0x0000000020002aac        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002aac                TwoWire::transmitting
+                0x0000000020002aa8        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aa8                TwoWire::transmitting
  .bss._ZN7TwoWire13rxBufferIndexE
-                0x0000000020002aad        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002aad                TwoWire::rxBufferIndex
+                0x0000000020002aa9        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aa9                TwoWire::rxBufferIndex
  .bss._ZN7TwoWire13txBufferIndexE
-                0x0000000020002aae        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002aae                TwoWire::txBufferIndex
+                0x0000000020002aaa        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aaa                TwoWire::txBufferIndex
  .bss._ZN7TwoWire14rxBufferLengthE
-                0x0000000020002aaf        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002aaf                TwoWire::rxBufferLength
+                0x0000000020002aab        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aab                TwoWire::rxBufferLength
  .bss._ZN7TwoWire14txBufferLengthE
-                0x0000000020002ab0        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002ab0                TwoWire::txBufferLength
+                0x0000000020002aac        0x1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aac                TwoWire::txBufferLength
  .bss._ZN7TwoWire8rxBufferE
-                0x0000000020002ab1       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002ab1                TwoWire::rxBuffer
+                0x0000000020002aad       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002aad                TwoWire::rxBuffer
  .bss._ZN7TwoWire8txBufferE
-                0x0000000020002ad1       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
-                0x0000000020002ad1                TwoWire::txBuffer
- *fill*         0x0000000020002af1        0x3 
+                0x0000000020002acd       0x20 build_arm_cortex_m3_base_application_stm32l/Wire.o
+                0x0000000020002acd                TwoWire::txBuffer
+ *fill*         0x0000000020002aed        0x3 
  .bss._ZZ5_sbrkE4heap
-                0x0000000020002af4        0x4 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+                0x0000000020002af0        0x4 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
  .bss.__malloc_current_mallinfo
-                0x0000000020002af8       0x28 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000020002af8                __malloc_current_mallinfo
+                0x0000000020002af4       0x28 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020002af4                __malloc_current_mallinfo
  .bss.__malloc_max_sbrked_mem
-                0x0000000020002b20        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000020002b20                __malloc_max_sbrked_mem
+                0x0000000020002b1c        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020002b1c                __malloc_max_sbrked_mem
  .bss.__malloc_max_total_mem
-                0x0000000020002b24        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000020002b24                __malloc_max_total_mem
+                0x0000000020002b20        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020002b20                __malloc_max_total_mem
  .bss.__malloc_top_pad
-                0x0000000020002b28        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000020002b28                __malloc_top_pad
+                0x0000000020002b24        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020002b24                __malloc_top_pad
  *(COMMON)
- COMMON         0x0000000020002b2c       0x48 build_arm_cortex_m3_base_application_stm32l/task.o
-                0x0000000020002b2c                log_task_dbg_object_queue
-                0x0000000020002b50                log_irq_queue
- COMMON         0x0000000020002b74        0x4 build_arm_cortex_m3_base_application_stm32l/xprintf.o
-                0x0000000020002b74                xprintf_stream_io_out
- COMMON         0x0000000020002b78       0x48 build_arm_cortex_m3_base_application_stm32l/system.o
-                0x0000000020002b78                stack_restart_app
-                0x0000000020002b98                system_info
- COMMON         0x0000000020002bc0        0xd build_arm_cortex_m3_base_application_stm32l/sys_cfg.o
-                0x0000000020002bc0                ring_buffer_char_shell_send
-                0x0000000020002bcc                ring_buffer_char_shell_sending_flag
- *fill*         0x0000000020002bcd        0x3 
- COMMON         0x0000000020002bd0       0x21 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
-                0x0000000020002bd0                __lock___atexit_recursive_mutex
-                0x0000000020002bd4                __lock___arc4random_mutex
-                0x0000000020002bd8                __lock___env_recursive_mutex
-                0x0000000020002bdc                __lock___sinit_recursive_mutex
-                0x0000000020002be0                __lock___malloc_recursive_mutex
-                0x0000000020002be4                __lock___at_quick_exit_mutex
-                0x0000000020002be8                __lock___dd_hash_mutex
-                0x0000000020002bec                __lock___tz_mutex
-                0x0000000020002bf0                __lock___sfp_recursive_mutex
- *fill*         0x0000000020002bf1        0x3 
- COMMON         0x0000000020002bf4        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-reent.o)
-                0x0000000020002bf4                errno
-                0x0000000020002bf8                _ebss = .
+ COMMON         0x0000000020002b28       0x48 build_arm_cortex_m3_base_application_stm32l/task.o
+                0x0000000020002b28                log_task_dbg_object_queue
+                0x0000000020002b4c                log_irq_queue
+ COMMON         0x0000000020002b70        0x4 build_arm_cortex_m3_base_application_stm32l/xprintf.o
+                0x0000000020002b70                xprintf_stream_io_out
+ COMMON         0x0000000020002b74       0x48 build_arm_cortex_m3_base_application_stm32l/system.o
+                0x0000000020002b74                stack_restart_app
+                0x0000000020002b94                system_info
+ COMMON         0x0000000020002bbc        0xd build_arm_cortex_m3_base_application_stm32l/sys_cfg.o
+                0x0000000020002bbc                ring_buffer_char_shell_send
+                0x0000000020002bc8                ring_buffer_char_shell_sending_flag
+ *fill*         0x0000000020002bc9        0x3 
+ COMMON         0x0000000020002bcc       0x21 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000020002bcc                __lock___atexit_recursive_mutex
+                0x0000000020002bd0                __lock___arc4random_mutex
+                0x0000000020002bd4                __lock___env_recursive_mutex
+                0x0000000020002bd8                __lock___sinit_recursive_mutex
+                0x0000000020002bdc                __lock___malloc_recursive_mutex
+                0x0000000020002be0                __lock___at_quick_exit_mutex
+                0x0000000020002be4                __lock___dd_hash_mutex
+                0x0000000020002be8                __lock___tz_mutex
+                0x0000000020002bec                __lock___sfp_recursive_mutex
+ *fill*         0x0000000020002bed        0x3 
+ COMMON         0x0000000020002bf0        0x4 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-reent.o)
+                0x0000000020002bf0                errno
+                0x0000000020002bf4                _ebss = .
 
-.heap           0x0000000020002bf8      0x400 load address 0x000000000801217c
-                0x0000000020002bf8                __heap_start__ = .
-                0x0000000020002ff8                . = (. + HEAP_SIZE)
- *fill*         0x0000000020002bf8      0x400 
-                0x0000000020002ff8                . = ALIGN (0x4)
-                0x0000000020002ff8                __heap_end__ = .
+.heap           0x0000000020002bf4      0x400 load address 0x0000000008012238
+                0x0000000020002bf4                __heap_start__ = .
+                0x0000000020002ff4                . = (. + HEAP_SIZE)
+ *fill*         0x0000000020002bf4      0x400 
+                0x0000000020002ff4                . = ALIGN (0x4)
+                0x0000000020002ff4                __heap_end__ = .
 
-.non_clear_ram  0x0000000020002ff8        0x4 load address 0x000000000801257c
-                0x0000000020002ff8                _non_clear_ram = .
+.non_clear_ram  0x0000000020002ff4        0x4 load address 0x0000000008012638
+                0x0000000020002ff4                _non_clear_ram = .
  *(.non_clear_ram)
  .non_clear_ram
-                0x0000000020002ff8        0x4 build_arm_cortex_m3_base_application_stm32l/app_non_clear_ram.o
-                0x0000000020002ff8                sys_soft_reboot_counter
+                0x0000000020002ff4        0x4 build_arm_cortex_m3_base_application_stm32l/app_non_clear_ram.o
+                0x0000000020002ff4                sys_soft_reboot_counter
  *(.non_clear_ram*)
-                0x0000000020002ffc                _enon_clear_ram = .
+                0x0000000020002ff8                _enon_clear_ram = .
 
-.end_ram        0x0000000020002ffc        0x0
-                0x0000000020002ffc                _end_ram = .
+.end_ram        0x0000000020002ff8        0x0
+                0x0000000020002ff8                _end_ram = .
                 0x0000000020004000                _estack = (ORIGIN (SRAM) + LENGTH (SRAM))
 
 /DISCARD/
@@ -6559,7 +6562,7 @@ LOAD /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-n
 LOAD /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libg.a
 OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_application.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0xa236e
+.debug_info     0x0000000000000000    0xa23f6
  .debug_info    0x0000000000000000     0x1694 build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_info    0x0000000000001694     0x12e4 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_info    0x0000000000002978     0x18dd build_arm_cortex_m3_base_application_stm32l/message.o
@@ -6595,46 +6598,46 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_info    0x0000000000020dc1      0x60f build_arm_cortex_m3_base_application_stm32l/system_stm32l1xx.o
  .debug_info    0x00000000000213d0     0x3f07 build_arm_cortex_m3_base_application_stm32l/app.o
  .debug_info    0x00000000000252d7     0x10b1 build_arm_cortex_m3_base_application_stm32l/app_non_clear_ram.o
- .debug_info    0x0000000000026388     0x1648 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
- .debug_info    0x00000000000279d0     0x11cf build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
- .debug_info    0x0000000000028b9f     0x5dc5 build_arm_cortex_m3_base_application_stm32l/shell.o
- .debug_info    0x000000000002e964     0x1790 build_arm_cortex_m3_base_application_stm32l/task_shell.o
- .debug_info    0x00000000000300f4     0x141b build_arm_cortex_m3_base_application_stm32l/task_life.o
- .debug_info    0x000000000003150f     0x211f build_arm_cortex_m3_base_application_stm32l/task_fw.o
- .debug_info    0x000000000003362e     0x1224 build_arm_cortex_m3_base_application_stm32l/task_list.o
- .debug_info    0x0000000000034852     0x2408 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
- .debug_info    0x0000000000036c5a     0x15dc build_arm_cortex_m3_base_application_stm32l/task_if.o
- .debug_info    0x0000000000038236     0x1263 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
- .debug_info    0x0000000000039499     0x1341 build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
- .debug_info    0x000000000003a7da     0x19f0 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
- .debug_info    0x000000000003c1ca     0x139c build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_info    0x000000000003d566     0x3511 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_info    0x0000000000040a77     0x35cd build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_info    0x0000000000044044     0x3656 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_info    0x000000000004769a     0x3794 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_info    0x000000000004ae2e     0x35fd build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_info    0x000000000004e42b     0x5485 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_info    0x00000000000538b0     0x3e8c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_info    0x000000000005773c     0x130e build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_info    0x0000000000058a4a     0x53d5 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_info    0x000000000005de1f     0x4f1e build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_info    0x0000000000062d3d     0x6e7d build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_info    0x0000000000069bba     0x608d build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_info    0x000000000006fc47     0x66ac build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_info    0x00000000000762f3     0x733f build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_info    0x000000000007d632     0x20a8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_info    0x000000000007f6da     0x3df2 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_info    0x00000000000834cc     0x78b1 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_info    0x000000000008ad7d     0x333f build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_info    0x000000000008e0bc     0x4478 build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_info    0x0000000000092534     0x48ec build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_info    0x0000000000096e20      0xfec build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_info    0x0000000000097e0c     0x56bf build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_info    0x000000000009d4cb     0x3ae3 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_info    0x00000000000a0fae     0x139a build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
- .debug_info    0x00000000000a2348       0x26 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
+ .debug_info    0x0000000000026388     0x1650 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+ .debug_info    0x00000000000279d8     0x11cf build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
+ .debug_info    0x0000000000028ba7     0x5dc5 build_arm_cortex_m3_base_application_stm32l/shell.o
+ .debug_info    0x000000000002e96c     0x1790 build_arm_cortex_m3_base_application_stm32l/task_shell.o
+ .debug_info    0x00000000000300fc     0x141b build_arm_cortex_m3_base_application_stm32l/task_life.o
+ .debug_info    0x0000000000031517     0x211f build_arm_cortex_m3_base_application_stm32l/task_fw.o
+ .debug_info    0x0000000000033636     0x1224 build_arm_cortex_m3_base_application_stm32l/task_list.o
+ .debug_info    0x000000000003485a     0x2408 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+ .debug_info    0x0000000000036c62     0x15dc build_arm_cortex_m3_base_application_stm32l/task_if.o
+ .debug_info    0x000000000003823e     0x1263 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
+ .debug_info    0x00000000000394a1     0x1341 build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
+ .debug_info    0x000000000003a7e2     0x19f0 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
+ .debug_info    0x000000000003c1d2     0x139c build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
+ .debug_info    0x000000000003d56e     0x3572 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_info    0x0000000000040ae0     0x3600 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_info    0x00000000000440e0     0x3642 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_info    0x0000000000047722     0x3794 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_info    0x000000000004aeb6     0x35fd build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_info    0x000000000004e4b3     0x5485 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_info    0x0000000000053938     0x3e8c build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_info    0x00000000000577c4     0x130e build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_info    0x0000000000058ad2     0x53d5 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_info    0x000000000005dea7     0x4f1e build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_info    0x0000000000062dc5     0x6e7d build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_info    0x0000000000069c42     0x608d build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_info    0x000000000006fccf     0x66ac build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_info    0x000000000007637b     0x733f build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_info    0x000000000007d6ba     0x20a8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_info    0x000000000007f762     0x3df2 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_info    0x0000000000083554     0x78b1 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_info    0x000000000008ae05     0x333f build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_info    0x000000000008e144     0x4478 build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_info    0x00000000000925bc     0x48ec build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_info    0x0000000000096ea8      0xfec build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_info    0x0000000000097e94     0x56bf build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_info    0x000000000009d553     0x3ae3 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_info    0x00000000000a1036     0x139a build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_info    0x00000000000a23d0       0x26 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
 
-.debug_abbrev   0x0000000000000000    0x12db6
+.debug_abbrev   0x0000000000000000    0x12de1
  .debug_abbrev  0x0000000000000000      0x3e3 build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_abbrev  0x00000000000003e3      0x405 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_abbrev  0x00000000000007e8      0x4ef build_arm_cortex_m3_base_application_stm32l/message.o
@@ -6670,46 +6673,46 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_abbrev  0x0000000000005990      0x1ae build_arm_cortex_m3_base_application_stm32l/system_stm32l1xx.o
  .debug_abbrev  0x0000000000005b3e      0x59a build_arm_cortex_m3_base_application_stm32l/app.o
  .debug_abbrev  0x00000000000060d8      0x2a4 build_arm_cortex_m3_base_application_stm32l/app_non_clear_ram.o
- .debug_abbrev  0x000000000000637c      0x357 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
- .debug_abbrev  0x00000000000066d3      0x2c9 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
- .debug_abbrev  0x000000000000699c      0x71c build_arm_cortex_m3_base_application_stm32l/shell.o
- .debug_abbrev  0x00000000000070b8      0x3ae build_arm_cortex_m3_base_application_stm32l/task_shell.o
- .debug_abbrev  0x0000000000007466      0x32c build_arm_cortex_m3_base_application_stm32l/task_life.o
- .debug_abbrev  0x0000000000007792      0x452 build_arm_cortex_m3_base_application_stm32l/task_fw.o
- .debug_abbrev  0x0000000000007be4      0x2c0 build_arm_cortex_m3_base_application_stm32l/task_list.o
- .debug_abbrev  0x0000000000007ea4      0x5a1 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
- .debug_abbrev  0x0000000000008445      0x392 build_arm_cortex_m3_base_application_stm32l/task_if.o
- .debug_abbrev  0x00000000000087d7      0x2c4 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
- .debug_abbrev  0x0000000000008a9b      0x2cb build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
- .debug_abbrev  0x0000000000008d66      0x3ab build_arm_cortex_m3_base_application_stm32l/task_dbg.o
- .debug_abbrev  0x0000000000009111      0x334 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_abbrev  0x0000000000009445      0x47b build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_abbrev  0x00000000000098c0      0x4cb build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_abbrev  0x0000000000009d8b      0x498 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_abbrev  0x000000000000a223      0x556 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_abbrev  0x000000000000a779      0x51a build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_abbrev  0x000000000000ac93      0x795 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_abbrev  0x000000000000b428      0x5fb build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_abbrev  0x000000000000ba23      0x311 build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_abbrev  0x000000000000bd34      0x871 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_abbrev  0x000000000000c5a5      0x7f7 build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_abbrev  0x000000000000cd9c      0x923 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_abbrev  0x000000000000d6bf      0x862 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_abbrev  0x000000000000df21      0x892 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_abbrev  0x000000000000e7b3      0x9fb build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_abbrev  0x000000000000f1ae      0x526 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_abbrev  0x000000000000f6d4      0x6c2 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_abbrev  0x000000000000fd96      0x977 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_abbrev  0x000000000001070d      0x3f8 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_abbrev  0x0000000000010b05      0x632 build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_abbrev  0x0000000000011137      0x69e build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_abbrev  0x00000000000117d5      0x3c5 build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_abbrev  0x0000000000011b9a      0x8ab build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_abbrev  0x0000000000012445      0x568 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_abbrev  0x00000000000129ad      0x3f5 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
- .debug_abbrev  0x0000000000012da2       0x14 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
+ .debug_abbrev  0x000000000000637c      0x367 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+ .debug_abbrev  0x00000000000066e3      0x2c9 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
+ .debug_abbrev  0x00000000000069ac      0x71c build_arm_cortex_m3_base_application_stm32l/shell.o
+ .debug_abbrev  0x00000000000070c8      0x3ae build_arm_cortex_m3_base_application_stm32l/task_shell.o
+ .debug_abbrev  0x0000000000007476      0x32c build_arm_cortex_m3_base_application_stm32l/task_life.o
+ .debug_abbrev  0x00000000000077a2      0x452 build_arm_cortex_m3_base_application_stm32l/task_fw.o
+ .debug_abbrev  0x0000000000007bf4      0x2c0 build_arm_cortex_m3_base_application_stm32l/task_list.o
+ .debug_abbrev  0x0000000000007eb4      0x5a1 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+ .debug_abbrev  0x0000000000008455      0x392 build_arm_cortex_m3_base_application_stm32l/task_if.o
+ .debug_abbrev  0x00000000000087e7      0x2c4 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
+ .debug_abbrev  0x0000000000008aab      0x2cb build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
+ .debug_abbrev  0x0000000000008d76      0x3ab build_arm_cortex_m3_base_application_stm32l/task_dbg.o
+ .debug_abbrev  0x0000000000009121      0x334 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
+ .debug_abbrev  0x0000000000009455      0x48f build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_abbrev  0x00000000000098e4      0x4dd build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_abbrev  0x0000000000009dc1      0x48d build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_abbrev  0x000000000000a24e      0x556 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_abbrev  0x000000000000a7a4      0x51a build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_abbrev  0x000000000000acbe      0x795 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_abbrev  0x000000000000b453      0x5fb build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_abbrev  0x000000000000ba4e      0x311 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_abbrev  0x000000000000bd5f      0x871 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_abbrev  0x000000000000c5d0      0x7f7 build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_abbrev  0x000000000000cdc7      0x923 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_abbrev  0x000000000000d6ea      0x862 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_abbrev  0x000000000000df4c      0x892 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_abbrev  0x000000000000e7de      0x9fb build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_abbrev  0x000000000000f1d9      0x526 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_abbrev  0x000000000000f6ff      0x6c2 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_abbrev  0x000000000000fdc1      0x977 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_abbrev  0x0000000000010738      0x3f8 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_abbrev  0x0000000000010b30      0x632 build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_abbrev  0x0000000000011162      0x69e build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_abbrev  0x0000000000011800      0x3c5 build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_abbrev  0x0000000000011bc5      0x8ab build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_abbrev  0x0000000000012470      0x568 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_abbrev  0x00000000000129d8      0x3f5 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_abbrev  0x0000000000012dcd       0x14 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
 
-.debug_loc      0x0000000000000000    0x1e36a
+.debug_loc      0x0000000000000000    0x1e3fc
  .debug_loc     0x0000000000000000      0x528 build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_loc     0x0000000000000528      0x386 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_loc     0x00000000000008ae      0x6ce build_arm_cortex_m3_base_application_stm32l/message.o
@@ -6750,30 +6753,30 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_loc     0x000000000000f32b      0x1bb build_arm_cortex_m3_base_application_stm32l/task_if.o
  .debug_loc     0x000000000000f4e6      0x2e2 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
  .debug_loc     0x000000000000f7c8       0x32 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_loc     0x000000000000f7fa      0x120 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_loc     0x000000000000f91a       0x6c build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_loc     0x000000000000f986      0x16f build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_loc     0x000000000000faf5      0x2c6 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_loc     0x000000000000fdbb      0x29b build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_loc     0x0000000000010056     0x18e9 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_loc     0x000000000001193f      0x63a build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_loc     0x0000000000011f79      0x128 build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_loc     0x00000000000120a1      0x92e build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_loc     0x00000000000129cf      0x701 build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_loc     0x00000000000130d0      0x761 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_loc     0x0000000000013831     0x1408 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_loc     0x0000000000014c39      0x348 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_loc     0x0000000000014f81      0xa2d build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_loc     0x00000000000159ae      0x740 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_loc     0x00000000000160ee     0x2b0b build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_loc     0x0000000000018bf9     0x28fd build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_loc     0x000000000001b4f6      0x4a7 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_loc     0x000000000001b99d     0x13a9 build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_loc     0x000000000001cd46      0x361 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_loc     0x000000000001d0a7      0x51e build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_loc     0x000000000001d5c5      0x8f1 build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_loc     0x000000000001deb6      0x423 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_loc     0x000000000001e2d9       0x91 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_loc     0x000000000000f7fa      0x173 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_loc     0x000000000000f96d       0xab build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_loc     0x000000000000fa18      0x16f build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_loc     0x000000000000fb87      0x2c6 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_loc     0x000000000000fe4d      0x29b build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_loc     0x00000000000100e8     0x18e9 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_loc     0x00000000000119d1      0x63a build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_loc     0x000000000001200b      0x128 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_loc     0x0000000000012133      0x92e build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_loc     0x0000000000012a61      0x701 build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_loc     0x0000000000013162      0x761 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_loc     0x00000000000138c3     0x1408 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_loc     0x0000000000014ccb      0x348 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_loc     0x0000000000015013      0xa2d build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_loc     0x0000000000015a40      0x740 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_loc     0x0000000000016180     0x2b0b build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_loc     0x0000000000018c8b     0x28fd build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_loc     0x000000000001b588      0x4a7 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_loc     0x000000000001ba2f     0x13a9 build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_loc     0x000000000001cdd8      0x361 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_loc     0x000000000001d139      0x51e build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_loc     0x000000000001d657      0x8f1 build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_loc     0x000000000001df48      0x423 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_loc     0x000000000001e36b       0x91 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
 
 .debug_aranges  0x0000000000000000     0x2570
  .debug_aranges
@@ -6923,7 +6926,7 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_aranges
                 0x0000000000002550       0x20 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
 
-.debug_ranges   0x0000000000000000     0x3f30
+.debug_ranges   0x0000000000000000     0x3f60
  .debug_ranges  0x0000000000000000       0xb8 build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_ranges  0x00000000000000b8       0x80 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_ranges  0x0000000000000138      0x180 build_arm_cortex_m3_base_application_stm32l/message.o
@@ -6970,32 +6973,32 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_ranges  0x0000000000002238       0x10 build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
  .debug_ranges  0x0000000000002248       0x40 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
  .debug_ranges  0x0000000000002288       0x10 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_ranges  0x0000000000002298       0x48 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_ranges  0x00000000000022e0       0x38 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_ranges  0x0000000000002318      0x190 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_ranges  0x00000000000024a8       0x40 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_ranges  0x00000000000024e8       0x48 build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_ranges  0x0000000000002530      0x228 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_ranges  0x0000000000002758       0x98 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_ranges  0x00000000000027f0       0x20 build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_ranges  0x0000000000002810      0x100 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_ranges  0x0000000000002910       0xd0 build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_ranges  0x00000000000029e0      0x1a0 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_ranges  0x0000000000002b80      0x398 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_ranges  0x0000000000002f18       0xe8 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_ranges  0x0000000000003000      0x278 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_ranges  0x0000000000003278       0xc8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_ranges  0x0000000000003340      0x1f0 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_ranges  0x0000000000003530      0x5b8 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_ranges  0x0000000000003ae8       0x20 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_ranges  0x0000000000003b08      0x1b0 build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_ranges  0x0000000000003cb8       0x70 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_ranges  0x0000000000003d28       0x88 build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_ranges  0x0000000000003db0       0xf0 build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_ranges  0x0000000000003ea0       0x58 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_ranges  0x0000000000003ef8       0x38 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_ranges  0x0000000000002298       0x60 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_ranges  0x00000000000022f8       0x50 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_ranges  0x0000000000002348      0x190 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_ranges  0x00000000000024d8       0x40 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_ranges  0x0000000000002518       0x48 build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_ranges  0x0000000000002560      0x228 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_ranges  0x0000000000002788       0x98 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_ranges  0x0000000000002820       0x20 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_ranges  0x0000000000002840      0x100 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_ranges  0x0000000000002940       0xd0 build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_ranges  0x0000000000002a10      0x1a0 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_ranges  0x0000000000002bb0      0x398 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_ranges  0x0000000000002f48       0xe8 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_ranges  0x0000000000003030      0x278 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_ranges  0x00000000000032a8       0xc8 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_ranges  0x0000000000003370      0x1f0 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_ranges  0x0000000000003560      0x5b8 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_ranges  0x0000000000003b18       0x20 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_ranges  0x0000000000003b38      0x1b0 build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_ranges  0x0000000000003ce8       0x70 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_ranges  0x0000000000003d58       0x88 build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_ranges  0x0000000000003de0       0xf0 build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_ranges  0x0000000000003ed0       0x58 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_ranges  0x0000000000003f28       0x38 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
 
-.debug_line     0x0000000000000000    0x27c80
+.debug_line     0x0000000000000000    0x27d39
  .debug_line    0x0000000000000000      0x8a9 build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_line    0x00000000000008a9      0x5e3 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_line    0x0000000000000e8c      0xa30 build_arm_cortex_m3_base_application_stm32l/message.o
@@ -7031,44 +7034,44 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_line    0x000000000000fcd4      0x3fc build_arm_cortex_m3_base_application_stm32l/system_stm32l1xx.o
  .debug_line    0x00000000000100d0      0x8c4 build_arm_cortex_m3_base_application_stm32l/app.o
  .debug_line    0x0000000000010994      0x3b7 build_arm_cortex_m3_base_application_stm32l/app_non_clear_ram.o
- .debug_line    0x0000000000010d4b      0x587 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
- .debug_line    0x00000000000112d2      0x4a4 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
- .debug_line    0x0000000000011776     0x165f build_arm_cortex_m3_base_application_stm32l/shell.o
- .debug_line    0x0000000000012dd5      0x6b4 build_arm_cortex_m3_base_application_stm32l/task_shell.o
- .debug_line    0x0000000000013489      0x4a6 build_arm_cortex_m3_base_application_stm32l/task_life.o
- .debug_line    0x000000000001392f      0xa8e build_arm_cortex_m3_base_application_stm32l/task_fw.o
- .debug_line    0x00000000000143bd      0x3b8 build_arm_cortex_m3_base_application_stm32l/task_list.o
- .debug_line    0x0000000000014775      0x7b8 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
- .debug_line    0x0000000000014f2d      0x5c4 build_arm_cortex_m3_base_application_stm32l/task_if.o
- .debug_line    0x00000000000154f1      0x40e build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
- .debug_line    0x00000000000158ff      0x4de build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
- .debug_line    0x0000000000015ddd      0x743 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
- .debug_line    0x0000000000016520      0x439 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_line    0x0000000000016959      0x7a0 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_line    0x00000000000170f9      0x790 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_line    0x0000000000017889      0x82e build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_line    0x00000000000180b7      0x7c0 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_line    0x0000000000018877      0x7c5 build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_line    0x000000000001903c     0x13fa build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_line    0x000000000001a436      0xad0 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_line    0x000000000001af06      0x4e2 build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_line    0x000000000001b3e8      0xf88 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_line    0x000000000001c370      0xbce build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_line    0x000000000001cf3e      0xbaf build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_line    0x000000000001daed      0xde9 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_line    0x000000000001e8d6      0x900 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_line    0x000000000001f1d6      0xcbc build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_line    0x000000000001fe92      0xac1 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_line    0x0000000000020953     0x1d8c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_line    0x00000000000226df     0x1971 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_line    0x0000000000024050      0x866 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_line    0x00000000000248b6      0xb40 build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_line    0x00000000000253f6      0x7be build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_line    0x0000000000025bb4      0x7d1 build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_line    0x0000000000026385      0xab8 build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_line    0x0000000000026e3d      0x8c6 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_line    0x0000000000027703      0x52c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
- .debug_line    0x0000000000027c2f       0x51 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
+ .debug_line    0x0000000000010d4b      0x58b build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+ .debug_line    0x00000000000112d6      0x4a4 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
+ .debug_line    0x000000000001177a     0x165f build_arm_cortex_m3_base_application_stm32l/shell.o
+ .debug_line    0x0000000000012dd9      0x6b4 build_arm_cortex_m3_base_application_stm32l/task_shell.o
+ .debug_line    0x000000000001348d      0x4a6 build_arm_cortex_m3_base_application_stm32l/task_life.o
+ .debug_line    0x0000000000013933      0xa8e build_arm_cortex_m3_base_application_stm32l/task_fw.o
+ .debug_line    0x00000000000143c1      0x3b8 build_arm_cortex_m3_base_application_stm32l/task_list.o
+ .debug_line    0x0000000000014779      0x7b8 build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+ .debug_line    0x0000000000014f31      0x5c4 build_arm_cortex_m3_base_application_stm32l/task_if.o
+ .debug_line    0x00000000000154f5      0x40e build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
+ .debug_line    0x0000000000015903      0x4de build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
+ .debug_line    0x0000000000015de1      0x743 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
+ .debug_line    0x0000000000016524      0x439 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
+ .debug_line    0x000000000001695d      0x7b0 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_line    0x000000000001710d      0x83e build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_line    0x000000000001794b      0x825 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_line    0x0000000000018170      0x7c0 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_line    0x0000000000018930      0x7c5 build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_line    0x00000000000190f5     0x13fa build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_line    0x000000000001a4ef      0xad0 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_line    0x000000000001afbf      0x4e2 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_line    0x000000000001b4a1      0xf88 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_line    0x000000000001c429      0xbce build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_line    0x000000000001cff7      0xbaf build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_line    0x000000000001dba6      0xde9 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_line    0x000000000001e98f      0x900 build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_line    0x000000000001f28f      0xcbc build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_line    0x000000000001ff4b      0xac1 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_line    0x0000000000020a0c     0x1d8c build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_line    0x0000000000022798     0x1971 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_line    0x0000000000024109      0x866 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_line    0x000000000002496f      0xb40 build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_line    0x00000000000254af      0x7be build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_line    0x0000000000025c6d      0x7d1 build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_line    0x000000000002643e      0xab8 build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_line    0x0000000000026ef6      0x8c6 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_line    0x00000000000277bc      0x52c build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_line    0x0000000000027ce8       0x51 build_arm_cortex_m3_base_application_stm32l/sys_ctrl.o
 
 .debug_str      0x0000000000000000     0xf6f2
  .debug_str     0x0000000000000000      0xa77 build_arm_cortex_m3_base_application_stm32l/task.o
@@ -7168,7 +7171,7 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_str     0x00000000000090a9       0x99 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
                                         0xab1 (size before relaxing)
  .debug_str     0x0000000000009142      0x102 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
-                                       0x16f9 (size before relaxing)
+                                       0x1717 (size before relaxing)
  .debug_str     0x0000000000009244      0x144 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
                                        0x17a2 (size before relaxing)
  .debug_str     0x0000000000009388       0xca build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
@@ -7484,7 +7487,7 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .ARM.attributes
                 0x0000000000000fff       0x1d /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
 
-.debug_frame    0x0000000000000000     0x6870
+.debug_frame    0x0000000000000000     0x6894
  .debug_frame   0x0000000000000000      0x1ac build_arm_cortex_m3_base_application_stm32l/task.o
  .debug_frame   0x00000000000001ac       0xd0 build_arm_cortex_m3_base_application_stm32l/timer.o
  .debug_frame   0x000000000000027c      0x1f4 build_arm_cortex_m3_base_application_stm32l/message.o
@@ -7519,57 +7522,57 @@ OUTPUT(build_arm_cortex_m3_base_application_stm32l/arm_cortex_m3_base_applicatio
  .debug_frame   0x0000000000002e00      0x890 build_arm_cortex_m3_base_application_stm32l/io_cfg.o
  .debug_frame   0x0000000000003690       0x40 build_arm_cortex_m3_base_application_stm32l/system_stm32l1xx.o
  .debug_frame   0x00000000000036d0       0x9c build_arm_cortex_m3_base_application_stm32l/app.o
- .debug_frame   0x000000000000376c       0x7c build_arm_cortex_m3_base_application_stm32l/app_bsp.o
- .debug_frame   0x00000000000037e8       0x20 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
- .debug_frame   0x0000000000003808      0x270 build_arm_cortex_m3_base_application_stm32l/shell.o
- .debug_frame   0x0000000000003a78       0x78 build_arm_cortex_m3_base_application_stm32l/task_shell.o
- .debug_frame   0x0000000000003af0       0x30 build_arm_cortex_m3_base_application_stm32l/task_life.o
- .debug_frame   0x0000000000003b20       0x3c build_arm_cortex_m3_base_application_stm32l/task_fw.o
- .debug_frame   0x0000000000003b5c       0x7c build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
- .debug_frame   0x0000000000003bd8       0x30 build_arm_cortex_m3_base_application_stm32l/task_if.o
- .debug_frame   0x0000000000003c08       0x20 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
- .debug_frame   0x0000000000003c28       0x20 build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
- .debug_frame   0x0000000000003c48       0x48 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
- .debug_frame   0x0000000000003c90       0x30 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
- .debug_frame   0x0000000000003cc0       0xa8 build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
- .debug_frame   0x0000000000003d68       0xac build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
- .debug_frame   0x0000000000003e14       0xa8 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
- .debug_frame   0x0000000000003ebc       0x88 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
- .debug_frame   0x0000000000003f44       0xb8 build_arm_cortex_m3_base_application_stm32l/view_render.o
- .debug_frame   0x0000000000003ffc      0x414 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
- .debug_frame   0x0000000000004410      0x1b8 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
- .debug_frame   0x00000000000045c8       0x40 build_arm_cortex_m3_base_application_stm32l/eeprom.o
- .debug_frame   0x0000000000004608      0x190 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
- .debug_frame   0x0000000000004798       0xcc build_arm_cortex_m3_base_application_stm32l/Dns.o
- .debug_frame   0x0000000000004864      0x1e4 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
- .debug_frame   0x0000000000004a48      0x190 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
- .debug_frame   0x0000000000004bd8       0xec build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
- .debug_frame   0x0000000000004cc4      0x1d4 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
- .debug_frame   0x0000000000004e98       0x80 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
- .debug_frame   0x0000000000004f18      0x4e4 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
- .debug_frame   0x00000000000053fc      0x4f4 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
- .debug_frame   0x00000000000058f0      0x154 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
- .debug_frame   0x0000000000005a44      0x28c build_arm_cortex_m3_base_application_stm32l/Print.o
- .debug_frame   0x0000000000005cd0       0xe4 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
- .debug_frame   0x0000000000005db4      0x160 build_arm_cortex_m3_base_application_stm32l/SPI.o
- .debug_frame   0x0000000000005f14      0x21c build_arm_cortex_m3_base_application_stm32l/Wire.o
- .debug_frame   0x0000000000006130      0x118 build_arm_cortex_m3_base_application_stm32l/twi.o
- .debug_frame   0x0000000000006248       0xa8 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
- .debug_frame   0x00000000000062f0       0x30 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
- .debug_frame   0x0000000000006320       0x4c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
- .debug_frame   0x000000000000636c       0x38 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
- .debug_frame   0x00000000000063a4       0x38 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
- .debug_frame   0x00000000000063dc       0x30 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
- .debug_frame   0x000000000000640c       0x3c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
- .debug_frame   0x0000000000006448       0x2c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000006474       0x34 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcmp.o)
- .debug_frame   0x00000000000064a8       0x20 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
- .debug_frame   0x00000000000064c8       0x20 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
- .debug_frame   0x00000000000064e8       0x80 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
- .debug_frame   0x0000000000006568       0x8c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
- .debug_frame   0x00000000000065f4       0xb0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
- .debug_frame   0x00000000000066a4       0x60 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-reent.o)
- .debug_frame   0x0000000000006704       0xac /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00000000000067b0       0x50 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000000000006800       0x24 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x0000000000006824       0x4c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x000000000000376c       0x84 build_arm_cortex_m3_base_application_stm32l/app_bsp.o
+ .debug_frame   0x00000000000037f0       0x20 build_arm_cortex_m3_base_application_stm32l/rf_remote_ctrl.o
+ .debug_frame   0x0000000000003810      0x270 build_arm_cortex_m3_base_application_stm32l/shell.o
+ .debug_frame   0x0000000000003a80       0x78 build_arm_cortex_m3_base_application_stm32l/task_shell.o
+ .debug_frame   0x0000000000003af8       0x30 build_arm_cortex_m3_base_application_stm32l/task_life.o
+ .debug_frame   0x0000000000003b28       0x3c build_arm_cortex_m3_base_application_stm32l/task_fw.o
+ .debug_frame   0x0000000000003b64       0x7c build_arm_cortex_m3_base_application_stm32l/task_zigbee.o
+ .debug_frame   0x0000000000003be0       0x30 build_arm_cortex_m3_base_application_stm32l/task_if.o
+ .debug_frame   0x0000000000003c10       0x20 build_arm_cortex_m3_base_application_stm32l/task_rf24_if.o
+ .debug_frame   0x0000000000003c30       0x20 build_arm_cortex_m3_base_application_stm32l/task_uart_if.o
+ .debug_frame   0x0000000000003c50       0x48 build_arm_cortex_m3_base_application_stm32l/task_dbg.o
+ .debug_frame   0x0000000000003c98       0x30 build_arm_cortex_m3_base_application_stm32l/flynshoot_game_control.o
+ .debug_frame   0x0000000000003cc8       0xac build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o
+ .debug_frame   0x0000000000003d74       0xc4 build_arm_cortex_m3_base_application_stm32l/flynshoot_missile.o
+ .debug_frame   0x0000000000003e38       0xa8 build_arm_cortex_m3_base_application_stm32l/flynshoot_ship.o
+ .debug_frame   0x0000000000003ee0       0x88 build_arm_cortex_m3_base_application_stm32l/flynshoot_display.o
+ .debug_frame   0x0000000000003f68       0xb8 build_arm_cortex_m3_base_application_stm32l/view_render.o
+ .debug_frame   0x0000000000004020      0x414 build_arm_cortex_m3_base_application_stm32l/Adafruit_GFX.o
+ .debug_frame   0x0000000000004434      0x1b8 build_arm_cortex_m3_base_application_stm32l/Adafruit_ssd1306syp.o
+ .debug_frame   0x00000000000045ec       0x40 build_arm_cortex_m3_base_application_stm32l/eeprom.o
+ .debug_frame   0x000000000000462c      0x190 build_arm_cortex_m3_base_application_stm32l/Dhcp.o
+ .debug_frame   0x00000000000047bc       0xcc build_arm_cortex_m3_base_application_stm32l/Dns.o
+ .debug_frame   0x0000000000004888      0x1e4 build_arm_cortex_m3_base_application_stm32l/EthernetClient.o
+ .debug_frame   0x0000000000004a6c      0x190 build_arm_cortex_m3_base_application_stm32l/Ethernet.o
+ .debug_frame   0x0000000000004bfc       0xec build_arm_cortex_m3_base_application_stm32l/EthernetServer.o
+ .debug_frame   0x0000000000004ce8      0x1d4 build_arm_cortex_m3_base_application_stm32l/EthernetUdp.o
+ .debug_frame   0x0000000000004ebc       0x80 build_arm_cortex_m3_base_application_stm32l/zb_zcl.o
+ .debug_frame   0x0000000000004f3c      0x4e4 build_arm_cortex_m3_base_application_stm32l/zb_znp.o
+ .debug_frame   0x0000000000005420      0x4f4 build_arm_cortex_m3_base_application_stm32l/PubSubClient.o
+ .debug_frame   0x0000000000005914      0x154 build_arm_cortex_m3_base_application_stm32l/wiring_digital.o
+ .debug_frame   0x0000000000005a68      0x28c build_arm_cortex_m3_base_application_stm32l/Print.o
+ .debug_frame   0x0000000000005cf4       0xe4 build_arm_cortex_m3_base_application_stm32l/IPAddress.o
+ .debug_frame   0x0000000000005dd8      0x160 build_arm_cortex_m3_base_application_stm32l/SPI.o
+ .debug_frame   0x0000000000005f38      0x21c build_arm_cortex_m3_base_application_stm32l/Wire.o
+ .debug_frame   0x0000000000006154      0x118 build_arm_cortex_m3_base_application_stm32l/twi.o
+ .debug_frame   0x000000000000626c       0xa8 build_arm_cortex_m3_base_application_stm32l/mini_cpp.o
+ .debug_frame   0x0000000000006314       0x30 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000006344       0x4c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000006390       0x38 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x00000000000063c8       0x38 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000006400       0x30 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000006430       0x3c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
+ .debug_frame   0x000000000000646c       0x2c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000006498       0x34 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00000000000064cc       0x20 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
+ .debug_frame   0x00000000000064ec       0x20 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x000000000000650c       0x80 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
+ .debug_frame   0x000000000000658c       0x8c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000006618       0xb0 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+ .debug_frame   0x00000000000066c8       0x60 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000006728       0xac /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000067d4       0x50 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000006824       0x24 /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x0000000000006848       0x4c /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)

@@ -3,11 +3,11 @@
 
 #include <stdint.h>
 
-#define NUM_MINES 5
-#define mineHeight 4
-#define mineWidth 4
-#define MINE_SPEED_X 5
-#define MINE_MIN_DIST_X 10
+#define NUM_MINES 3
+#define mineHeight 8
+#define mineWidth 8
+#define MINE_SPEED_X 2
+#define MINE_MIN_DIST_X 5
 
 typedef struct {
 	int8_t x, y;

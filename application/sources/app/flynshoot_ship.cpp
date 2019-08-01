@@ -94,7 +94,7 @@ static void updateShipUp()
 			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
 		}
 	}
-	screenObj.update();
+//	screenObj.update();
 }
 
 static void updateShipDown()
@@ -115,7 +115,7 @@ static void updateShipDown()
 			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
 		}
 	}
-	screenObj.update();
+//	screenObj.update();
 }
 
 //int* getShipCoordinates() {

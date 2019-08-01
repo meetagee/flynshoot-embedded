@@ -90,5 +90,6 @@ build_arm_cortex_m3_base_application_stm32l/flynshoot_mines.o: \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/ctype.h \
  sources/platform/stm32l/arduino/cores/stm32/pgmspace.h \
  /home/khoa/workspace/tools/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/inttypes.h \
- sources/app/app.h sources/app/task_list.h sources/ak/inc/task.h \
- sources/ak/inc/timer.h sources/ak/inc/timer.h
+ sources/app/app.h sources/app/app_dbg.h sources/common/xprintf.h \
+ sources/app/task_list.h sources/ak/inc/task.h sources/ak/inc/timer.h \
+ sources/ak/inc/timer.h

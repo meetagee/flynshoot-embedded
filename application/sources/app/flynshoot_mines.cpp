@@ -1,6 +1,7 @@
 #include "flynshoot_mines.h"
 #include "flynshoot_display.h"
 #include "app.h"
+#include "app_dbg.h"
 #include "task_list.h"
 #include "timer.h"
 
@@ -33,7 +34,7 @@ void task_control_mines(ak_msg_t* msg) {
 			mines_coords[i].x -= MINE_SPEED_X;
 		}
 		renderMines();
-		timer_set(AC_MINES_ID, AC_MINES_ARMED, 100, TIMER_PERIODIC);
+		timer_set(AC_MINES_ID, AC_MINES_ARMED, 50, TIMER_PERIODIC);
 	}
 		break;
 
@@ -49,7 +50,7 @@ void task_control_mines(ak_msg_t* msg) {
 
 uint8_t minePassScr (void) {
 	for(uint8_t i = 0; i < NUM_MINES; i++) {
-		if(mines_coords[i].x + MINE_SPEED_X <= 0 /*|| mines_coords[i].available == false*/) {
+		if(mines_coords[i].x + mineWidth < 0 || mines_coords[i].available == false) {
 			return i;
 		}
 	}
@@ -71,6 +72,11 @@ void renderMines (void) {
 		if(mines_coords[i].available == true && mines_coords[i].x < tunnelWidth) {
 			screenObj.drawSun(mines_coords[i].x + MINE_SPEED_X, mines_coords[i].y, mineWidth, BLACK);
 			screenObj.drawSun(mines_coords[i].x, mines_coords[i].y, mineWidth, WHITE);
+		}
+		else {
+			APP_DBG_SIG("CLEAR MINE!\n");
+			screenObj.drawSun(mines_coords[i].x + MINE_SPEED_X, mines_coords[i].y, mineWidth, BLACK);
+			screenObj.drawSun(mines_coords[i].x, mines_coords[i].y, mineWidth, BLACK);
 		}
 	}
 }

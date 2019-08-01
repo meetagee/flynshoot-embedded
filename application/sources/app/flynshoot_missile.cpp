@@ -36,21 +36,23 @@ void task_control_missile(ak_msg_t* msg) {
 		case(AC_MISSILE_FLYING): {
 			if(draw == false) spawnMissile();
 			APP_DBG_SIG("AC_MISSILE_FLYING \n");
-			if(missileX + MISSILE_SPEED_X < tunnelWidth) {
+			if(missileX + MISSILE_SPEED_X < tunnelWidth && !MISSILE_HIT_MINE() /*&& !MISSILE_HIT_TUNNEL()*/) {
 				missileX += MISSILE_SPEED_X;
 				renderMissile();
 				draw = true;
 				timer_set(AC_MISSILE_ID, AC_MISSILE_FLYING, 50, TIMER_PERIODIC);
 			}
 
-			else if (MISSILE_HIT_MINE()) {
+			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_MINE()) {
+				APP_DBG_SIG("HIT MINE!\n");
 				score++;
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
 			}
 
-			else if  (MISSILE_HIT_TUNNEL()) {
-				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
-			}
+//			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_TUNNEL()) {
+//				APP_DBG_SIG("HIT TUNNEl!\n");
+//				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
+//			}
 
 			else {
 				clearMissile();
@@ -75,8 +77,8 @@ void task_control_missile(ak_msg_t* msg) {
 }
 
 void spawnMissile(void){
-	missileX = shipx + 1;
-	missileY = shipy;
+	missileX = shipx + shipWidth;
+	missileY = shipy + shipHeight - 1;
 }
 
 
@@ -112,6 +114,13 @@ bool MISSILE_HIT_TUNNEL (void) {
 bool MISSILE_HIT_MINE(void) {
 	// TODO: check if missile hits mine
 	// return true if yes, otw false
+	for(uint8_t i = 0; i < NUM_MINES; i++) {
+		if((missileX + MISSILE_LENGTH >= mines_coords[i].x - mineWidth +1) && ((missileY > mines_coords[i].y - mineHeight + 1 && missileY < mines_coords[i].y + mineHeight - 1)
+				 || (missileY + MISSILE_WIDTH - 1 > mines_coords[i].y - mineHeight + 1 && missileY + MISSILE_WIDTH - 1 < mines_coords[i].y + mineHeight - 1))) {
+			mines_coords[i].available = false;
+			return true;
+		}
+	}
 	return false;
 }
 
