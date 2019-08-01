@@ -14,6 +14,7 @@
 // prototype
 void spawnMissile(void);
 void renderMissile(void);
+
 void clearMissile(void);
 bool MISSILE_HIT_TUNNEL(void);
 bool MISSILE_HIT_MINE(void);
@@ -26,13 +27,14 @@ static bool endOfLine = false;
 
 void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
+
 		case(AC_MISSILE_ARMED): {
-			APP_DBG_SIG("AC_MISSILE_ARMED \n");
-			spawnMissile();
+			APP_DBG_SIG("Nothing happenning \n");
 		}
 			break;
 
 		case(AC_MISSILE_FLYING): {
+			if(draw == false) spawnMissile();
 			APP_DBG_SIG("AC_MISSILE_FLYING \n");
 			if(missileX + MISSILE_SPEED_X < tunnelWidth) {
 				missileX += MISSILE_SPEED_X;
@@ -60,6 +62,7 @@ void task_control_missile(ak_msg_t* msg) {
 
 		case(AC_MISSILE_EXPLODING) : {
 			APP_DBG_SIG("AC_MISSILE_EXPLODING \n");
+
 			clearMissile();
 			timer_remove_attr(AC_MISSILE_ID, AC_MISSILE_FLYING);
 			task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
@@ -94,6 +97,7 @@ void clearMissile (void) {
 	endOfLine = true;
 	renderMissile();
 	endOfLine= false;
+	draw = false;
 }
 
 bool MISSILE_HIT_TUNNEL (void) {
