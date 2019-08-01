@@ -7,15 +7,10 @@
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
 
-bool MISSILE_HIT_TUNNEL (void);
-
-
 Adafruit_ssd1306syp screenObj;
 
 static void drawTunnel();
 static void updateTunnel();
-
-bool MISSILE_HIT_TUNNEL (void);
 
 void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
