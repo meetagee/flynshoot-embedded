@@ -7,7 +7,6 @@
 #define MISSILE_LENGTH	5
 #define MISSILE_WIDTH	2
 
-extern uint8_t missile_bmp[MISSILE_LENGTH];
-extern uint8_t missileX, missileY, score;
+extern uint8_t missileX, missileY;
 
 #endif // MISSILE_H

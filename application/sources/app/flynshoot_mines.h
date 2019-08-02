@@ -10,7 +10,7 @@
 #define MINE_MIN_DIST_X 5
 
 typedef struct {
-	int8_t x, y;
+	int32_t x, y;
 	bool available;
 } coord_t;
 

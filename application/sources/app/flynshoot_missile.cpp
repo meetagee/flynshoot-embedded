@@ -19,7 +19,6 @@ void clearMissile(void);
 bool MISSILE_HIT_TUNNEL(void);
 bool MISSILE_HIT_MINE(void);
 
-uint8_t missile_bmp[MISSILE_LENGTH];
 uint8_t missileX, missileY;
 uint8_t score;
 static bool draw = false;
@@ -29,13 +28,13 @@ void task_control_missile(ak_msg_t* msg) {
 	switch(msg->sig) {
 
 		case(AC_MISSILE_ARMED): {
-			APP_DBG_SIG("Nothing happenning \n");
+			//APP_DBG_SIG("Nothing happenning \n");
 		}
 			break;
 
 		case(AC_MISSILE_FLYING): {
 			if(draw == false) spawnMissile();
-			APP_DBG_SIG("AC_MISSILE_FLYING \n");
+			//APP_DBG_SIG("AC_MISSILE_FLYING \n");
 			if(missileX + MISSILE_SPEED_X < tunnelWidth && !MISSILE_HIT_MINE() /*&& !MISSILE_HIT_TUNNEL()*/) {
 				missileX += MISSILE_SPEED_X;
 				renderMissile();
@@ -44,8 +43,9 @@ void task_control_missile(ak_msg_t* msg) {
 			}
 
 			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_MINE()) {
-				APP_DBG_SIG("HIT MINE!\n");
+				//APP_DBG_SIG("HIT MINE!\n");
 				score++;
+				clearMissile();
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
 			}
 
@@ -63,8 +63,7 @@ void task_control_missile(ak_msg_t* msg) {
 			break;
 
 		case(AC_MISSILE_EXPLODING) : {
-			APP_DBG_SIG("AC_MISSILE_EXPLODING \n");
-
+			//APP_DBG_SIG("AC_MISSILE_EXPLODING \n");
 			clearMissile();
 			timer_remove_attr(AC_MISSILE_ID, AC_MISSILE_FLYING);
 			task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_ARMED);
@@ -114,9 +113,15 @@ bool MISSILE_HIT_TUNNEL (void) {
 bool MISSILE_HIT_MINE(void) {
 	// TODO: check if missile hits mine
 	// return true if yes, otw false
-	for(uint8_t i = 0; i < NUM_MINES; i++) {
-		if((missileX + MISSILE_LENGTH >= mines_coords[i].x - mineWidth +1) && ((missileY > mines_coords[i].y - mineHeight + 1 && missileY < mines_coords[i].y + mineHeight - 1)
-				 || (missileY + MISSILE_WIDTH - 1 > mines_coords[i].y - mineHeight + 1 && missileY + MISSILE_WIDTH - 1 < mines_coords[i].y + mineHeight - 1))) {
+	for(int i = 0; i < NUM_MINES; i++) {
+		if(		(missileX + MISSILE_LENGTH >= mines_coords[i].x && missileX + MISSILE_LENGTH <= mines_coords[i].x + mineWidth)
+				&& ((missileY >= mines_coords[i].y && missileY <= mines_coords[i].y + mineHeight - 1)|| (missileY + MISSILE_WIDTH - 1 >= mines_coords[i].y && missileY + MISSILE_WIDTH - 1 <= mines_coords[i].y + mineHeight - 1))
+				&& (mines_coords[i].available == true)) {
+			//APP_DBG_SIG("MINE HIT: %d, MINE COORD: (%d, %d) - MISSILE COORD: (%d, %d)\n", i, mines_coords[i].x, mines_coords[i].y, missileX, missileY);
+			//APP_DBG("***********************************\n");
+			screenObj.drawSun(mines_coords[i].x, mines_coords[i].y, mineWidth, BLACK);
+			mines_coords[i].x = INT8_MAX;
+			mines_coords[i].y = INT8_MAX;
 			mines_coords[i].available = false;
 			return true;
 		}

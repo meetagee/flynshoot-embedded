@@ -182,6 +182,7 @@ void app_task_init() {
 	task_post_pure_msg(AC_GAME_CONTROL_ID,AC_GAME_CONTROL_UPDATE);
 	task_post_pure_msg(AC_SHIP_ID,AC_SHIP_PARKED);
 	task_post_pure_msg(AC_MISSILE_ID,AC_MISSILE_ARMED);
+	task_post_pure_msg(AC_MINES_ID, AC_MINES_INIT);
 }
 
 /*****************************************************************************/
