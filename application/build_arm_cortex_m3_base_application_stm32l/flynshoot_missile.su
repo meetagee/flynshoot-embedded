@@ -1,6 +1,14 @@
 flynshoot_missile.cpp:76:6:void spawnMissile()	0	static
+<<<<<<< HEAD
 flynshoot_missile.cpp:102:6:bool MISSILE_HIT_TUNNEL()	0	static
 flynshoot_missile.cpp:111:6:bool MISSILE_HIT_MINE()	32	static
 flynshoot_missile.cpp:82:6:void renderMissile()	24	static
 flynshoot_missile.cpp:95:6:void clearMissile()	8	static
 flynshoot_missile.cpp:26:6:void task_control_missile(ak_msg_t*)	16	static
+=======
+flynshoot_missile.cpp:104:6:bool MISSILE_HIT_TUNNEL()	16	static
+flynshoot_missile.cpp:114:6:bool MISSILE_HIT_MINE()	32	static
+flynshoot_missile.cpp:82:6:void renderMissile()	32	static
+flynshoot_missile.cpp:97:6:void clearMissile()	8	static
+flynshoot_missile.cpp:27:6:void task_control_missile(ak_msg_t*)	16	static
+>>>>>>> 1d25cb54f34393628adee34fe1a1b152987fec54

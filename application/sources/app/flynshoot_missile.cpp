@@ -34,8 +34,7 @@ void task_control_missile(ak_msg_t* msg) {
 		case(AC_MISSILE_FLYING): {
 			if(draw == false) spawnMissile();
 			//APP_DBG_SIG("AC_MISSILE_FLYING \n");
-			if(missileX + MISSILE_SPEED_X < tunnelWidth && !MISSILE_HIT_MINE() /*&& !MISSILE_HIT_TUNNEL()*/) {
-				missileX += MISSILE_SPEED_X;
+			if(missileX + MISSILE_SPEED_X < tunnelWidth && !MISSILE_HIT_MINE() && !MISSILE_HIT_TUNNEL()) {
 				renderMissile();
 				draw = true;
 				timer_set(AC_MISSILE_ID, AC_MISSILE_FLYING, 50, TIMER_PERIODIC);
@@ -43,14 +42,18 @@ void task_control_missile(ak_msg_t* msg) {
 
 			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_MINE()) {
 				//APP_DBG_SIG("HIT MINE!\n");
+<<<<<<< HEAD
 				clearMissile();
+=======
+				score++;
+>>>>>>> 1d25cb54f34393628adee34fe1a1b152987fec54
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
 			}
 
-//			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_TUNNEL()) {
-//				APP_DBG_SIG("HIT TUNNEl!\n");
-//				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
-//			}
+			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_TUNNEL()) {
+				//APP_DBG_SIG("HIT TUNNEl!\n");
+				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
+			}
 
 			else {
 				clearMissile();
@@ -75,15 +78,17 @@ void task_control_missile(ak_msg_t* msg) {
 
 void spawnMissile(void){
 	missileX = shipx + shipWidth;
-	missileY = shipy + shipHeight - 1;
+	missileY = shipy + shipHeight + 2;
 }
 
 
 void renderMissile (void) {
-	if(!draw) {
+	missileX += MISSILE_SPEED_X;
+	if(!draw && !endOfLine) {
 		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, MISSILE_WIDTH, WHITE);
 	}
 	else if (endOfLine) {
+		screenObj.fillRect(missileX- MISSILE_SPEED_X, missileY, MISSILE_LENGTH, MISSILE_WIDTH, BLACK);
 		screenObj.fillRect(missileX, missileY, MISSILE_LENGTH, MISSILE_WIDTH, BLACK);
 	}
 	else {
@@ -102,7 +107,8 @@ void clearMissile (void) {
 bool MISSILE_HIT_TUNNEL (void) {
 	// TODO: check if missile hits tunnel
 	// return true if yes, otw false
-	if(missileY <= topTunnel[missileX + MISSILE_LENGTH] || missileY + MISSILE_WIDTH - 1 >= botTunnel[missileX + MISSILE_LENGTH]) {
+	if(checkTunnelOverlap(missileX + MISSILE_LENGTH, missileY) || checkTunnelOverlap(missileX + MISSILE_LENGTH, missileY + MISSILE_WIDTH - 1)) {
+		//APP_DBG("MISSILE HITS TUNNEL\n");
 		return true;
 	}
 	return false;

@@ -78,43 +78,49 @@ void drawShip(){
 
 static void updateShipUp()
 {
-	for(uint8_t j = 0; j < shipHeight; j++)
-	{
-		for(uint8_t i = 0; i < shipWidth; i++)
-		{
-			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,BLACK);
-		}
-	}
+//	for(uint8_t j = 0; j < shipHeight; j++)
+//	{
+//		for(uint8_t i = 0; i < shipWidth; i++)
+//		{
+//			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,BLACK);
+//		}
+//	}
 	shipy+=2;
 	for(uint8_t j = 0; j < shipHeight; j++)
 	{
 		for(uint8_t i = 0; i < shipWidth; i++)
 		{
-			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
+			if(ship[j][i] == 1) {
+				//screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
+				screenObj.fillRect(shipx+2*i,(shipy-2)+2*j,2,2,BLACK);
+			}
 		}
 	}
-	screenObj.update();
+	//screenObj.update();
 }
 
 static void updateShipDown()
 {
-	for(uint8_t j = 0; j < shipHeight; j++)
-	{
-		for(uint8_t i = 0; i < shipWidth; i++)
-		{
-			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,BLACK);
-		}
-	}
+//	for(uint8_t j = 0; j < shipHeight; j++)
+//	{
+//		for(uint8_t i = 0; i < shipWidth; i++)
+//		{
+//			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,BLACK);
+//		}
+//	}
 	shipy-=2;
 
 	for(uint8_t j = 0; j < shipHeight; j++)
 	{
 		for(uint8_t i = 0; i < shipWidth; i++)
 		{
-			if(ship[j][i] == 1) screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
+			if(ship[j][i] == 1) {
+				//screenObj.fillRect(shipx+2*i,shipy+2*j,2,2,WHITE);
+				screenObj.fillRect(shipx+2*i,(shipy+2)+2*j,2,2,BLACK);
+			}
 		}
 	}
-	screenObj.update();
+	//screenObj.update();
 }
 
 //int* getShipCoordinates() {
