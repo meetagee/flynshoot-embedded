@@ -12,6 +12,6 @@ extern Adafruit_ssd1306syp screenObj;
 
 extern int topTunnel[tunnelWidth];
 extern int botTunnel[tunnelWidth];
-
+extern int score;
 extern bool checkTunnelOverlap(uint8_t x, uint8_t y);
 #endif // FLYNSHOOT_DISPLAY_H

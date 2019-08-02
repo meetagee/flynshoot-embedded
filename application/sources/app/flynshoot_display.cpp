@@ -6,7 +6,7 @@
 
 int topTunnel[tunnelWidth];
 int botTunnel[tunnelWidth];
-
+int score;
 Adafruit_ssd1306syp screenObj;
 
 static void drawTunnel();
@@ -16,6 +16,7 @@ void task_control_display(ak_msg_t* msg) {
 	switch (msg->sig) {
 		case AC_FLYNSHOOT_INIT:
 		{
+			score = 0;
 			for(int i = 0; i < tunnelWidth; i++)
 			{
 				topTunnel[i] = 0;
@@ -30,8 +31,6 @@ void task_control_display(ak_msg_t* msg) {
 		break;
 		case AC_FLYNSHOOT_DRAW_TUNNEL:
 		{
-			screenObj.setCursor(85,5);
-			screenObj.print("display");
 			drawTunnel();
 			checkDeath();
 		}
@@ -64,6 +63,12 @@ static void updateTunnel(){
 	if(botNewBlocks < 0) botNewBlocks=0;
 	topTunnel[tunnelWidth-1] = topNewBlocks;
 	botTunnel[tunnelWidth-1] = botNewBlocks;
+	score++;
+	screenObj.setCursor(85,5);
+	screenObj.print("Score: ");
+	screenObj.setCursor(85,15);
+	screenObj.fillRect(85,15,40,10,BLACK);
+	screenObj.print(score);
 }
 
 bool checkTunnelOverlap(uint8_t x, uint8_t y)

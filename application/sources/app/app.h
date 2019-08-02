@@ -166,6 +166,7 @@ enum {
 /* define signal */
 enum {
 	AC_GAME_CONTROL_UPDATE = AK_USER_DEFINE_SIG,
+	AC_GAME_CONTROL_OVER,
 };
 
 /*****************************************************************************/

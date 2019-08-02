@@ -20,7 +20,6 @@ bool MISSILE_HIT_TUNNEL(void);
 bool MISSILE_HIT_MINE(void);
 
 uint8_t missileX, missileY;
-uint8_t score;
 static bool draw = false;
 static bool endOfLine = false;
 
@@ -44,7 +43,6 @@ void task_control_missile(ak_msg_t* msg) {
 
 			else if (missileX + MISSILE_SPEED_X < tunnelWidth && MISSILE_HIT_MINE()) {
 				//APP_DBG_SIG("HIT MINE!\n");
-				score++;
 				clearMissile();
 				task_post_pure_msg(AC_MISSILE_ID, AC_MISSILE_EXPLODING);
 			}

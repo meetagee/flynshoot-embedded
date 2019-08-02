@@ -26,8 +26,6 @@ void task_control_ship(ak_msg_t* msg) {
 		}
 			break;
 		case(AC_SHIP_ACTIVE): {
-			screenObj.setCursor(85,15);
-			screenObj.print("ship");
 			drawShip();
 			task_post_pure_msg(AC_SHIP_ID,AC_SHIP_FLYING);
 		}
@@ -59,8 +57,7 @@ void checkDeath()
 			{
 				if(checkTunnelOverlap(shipx + 2*i, (shipy + 2*j)+2))
 				{
-					screenObj.setCursor(85,25);
-					screenObj.print("overlap");
+					task_post_pure_msg(AC_GAME_CONTROL_ID,AC_GAME_CONTROL_OVER);
 				}
 			}
 		}
