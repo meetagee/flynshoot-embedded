@@ -1,5 +1,5 @@
-flynshoot_mines.cpp:48:9:uint8_t minePassScr()	32	static
-flynshoot_mines.cpp:59:6:void minesInit()	32	static
+flynshoot_mines.cpp:48:9:uint8_t minePassScr()	0	static
+flynshoot_mines.cpp:59:6:void minesInit()	24	static
 flynshoot_mines.cpp:74:6:void renderMines()	32	static
 flynshoot_mines.cpp:87:6:void updateMines()	16	static
 flynshoot_mines.cpp:18:6:void task_control_mines(ak_msg_t*)	8	static
