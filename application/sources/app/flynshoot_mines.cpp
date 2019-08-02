@@ -1,13 +1,13 @@
 #include "flynshoot_mines.h"
 #include "flynshoot_display.h"
+#include "flynshoot_ship.h"
+
 #include "app.h"
 #include "app_dbg.h"
 #include "task_list.h"
 #include "timer.h"
 
 coord_t	mines_coords[NUM_MINES];
-//static uint8_t mine_ctr = 0;
-//static uint8_t oldest_mine = 0;
 
 // prototypes
 void updateMines (void);
@@ -25,13 +25,17 @@ void task_control_mines(ak_msg_t* msg) {
 
 	case AC_MINES_ARMED: {
 		updateMines();
+		if(gameOver) {
+			timer_remove_attr(AC_MINES_ID, AC_MINES_ARMED);
+			task_post_pure_msg(AC_GAME_CONTROL_ID, AC_GAME_CONTROL_OVER);
+		}
 		task_post_pure_msg(AC_MINES_ID, AC_MINES_FLYING);
 	}
 		break;
 
 	case AC_MINES_FLYING: {
 		renderMines();
-		timer_set(AC_MINES_ID, AC_MINES_ARMED, 100, TIMER_PERIODIC);
+		timer_set(AC_MINES_ID, AC_MINES_ARMED, 50, TIMER_PERIODIC);
 	}
 		break;
 
@@ -47,12 +51,12 @@ void task_control_mines(ak_msg_t* msg) {
 
 uint8_t minePassScr (void) {
 	for(uint8_t i = 0; i < NUM_MINES; i++) {
-		//APP_DBG("Mine[%d] avai: %d, (%d, %d)\n", i, mines_coords[i].available, mines_coords[i].x, mines_coords[i].y);
+//		APP_DBG("Mine[%d] avai: %d, (%d, %d)\n", i, mines_coords[i].available, mines_coords[i].x, mines_coords[i].y);
 		if(mines_coords[i].x + mineWidth < 0 || mines_coords[i].available == false) {
 			return i;
 		}
 	}
-	//APP_DBG("***********************************\n");
+//	APP_DBG("***********************************\n");
 	return NUM_MINES;
 }
 
@@ -65,7 +69,7 @@ void minesInit (void) {
 		mines_coords[i].x = mines_coords[i-1].x + ((uint16_t)rand() % (tunnelWidth - MINE_MIN_DIST_X + 1)) + MINE_MIN_DIST_X;
 		mines_coords[i].y = ((uint16_t)rand() % (BOT_TUNNEL_HIGHEST - TOP_TUNNEL_LOWEST + 1)) + TOP_TUNNEL_LOWEST;
 		mines_coords[i].available = true;
-		//APP_DBG("Mine[%d] avai: %d\n", i, mines_coords[i].available);
+//		APP_DBG("Mine[%d] avai: %d\n", i, mines_coords[i].available);
 	}
 //	APP_DBG("DONE INIT \n");
 //	APP_DBG("***********************************\n");

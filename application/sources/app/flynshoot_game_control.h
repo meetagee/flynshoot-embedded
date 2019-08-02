@@ -3,7 +3,4 @@
 
 #include <stdint.h>
 
-#define DEFAULT_TIME_TICK 100
-
-
 #endif // FLYNSHOOT_GAME_CONTROL_H

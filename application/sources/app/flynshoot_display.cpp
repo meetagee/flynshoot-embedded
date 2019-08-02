@@ -1,7 +1,8 @@
-#include "flynshoot_display.h"
 #include "app.h"
 #include "task_list.h"
 #include "app_dbg.h"
+
+#include "flynshoot_display.h"
 #include "flynshoot_ship.h"
 
 int topTunnel[tunnelWidth];
@@ -31,6 +32,9 @@ void task_control_display(ak_msg_t* msg) {
 		break;
 		case AC_FLYNSHOOT_DRAW_TUNNEL:
 		{
+			if(gameOver) {
+				task_post_pure_msg(AC_GAME_CONTROL_ID, AC_GAME_CONTROL_OVER);
+			}
 			drawTunnel();
 			checkDeath();
 		}
@@ -65,7 +69,7 @@ static void updateTunnel(){
 	botTunnel[tunnelWidth-1] = botNewBlocks;
 	score++;
 	screenObj.setCursor(85,5);
-	screenObj.print("Score: ");
+	screenObj.print("Score");
 	screenObj.setCursor(85,15);
 	screenObj.fillRect(85,15,40,10,BLACK);
 	screenObj.print(score);
