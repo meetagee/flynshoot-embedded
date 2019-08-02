@@ -3,6 +3,8 @@
 #include "app.h"
 #include "timer.h"
 #include "flynshoot_display.h"
+
+
 void task_control_game(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_GAME_CONTROL_UPDATE): {

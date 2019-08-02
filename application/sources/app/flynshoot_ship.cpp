@@ -3,7 +3,6 @@
 #include "app.h"
 
 #include "flynshoot_display.h"
-
 uint8_t ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 									   {1,1,0,0,0},
 									   {1,1,1,1,0,},
@@ -12,6 +11,7 @@ uint8_t ship[shipHeight][shipWidth] = {{1,0,0,0,0},
 
 uint8_t shipx;
 uint8_t shipy;
+bool gameOver;
 
 void drawShip();
 static void updateShipUp();
@@ -20,6 +20,7 @@ static void updateShipDown();
 void task_control_ship(ak_msg_t* msg) {
 	switch(msg->sig) {
 		case(AC_SHIP_PARKED): {
+			gameOver = false;
 			shipx = 10;
 			shipy = 30;
 			task_post_pure_msg(AC_SHIP_ID,AC_SHIP_ACTIVE);
@@ -57,6 +58,7 @@ void checkDeath()
 			{
 				if(checkTunnelOverlap(shipx + 2*i, (shipy + 2*j)+2))
 				{
+					gameOver = true;
 					task_post_pure_msg(AC_GAME_CONTROL_ID,AC_GAME_CONTROL_OVER);
 				}
 			}

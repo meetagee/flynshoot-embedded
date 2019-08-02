@@ -9,7 +9,7 @@
 
 extern uint8_t ship[shipHeight][shipWidth];
 extern uint8_t shipx, shipy;
-
+extern bool gameOver;
 extern void drawShip();
 extern void checkDeath();
 #endif // FLYNSHOOT_SHIP_H
